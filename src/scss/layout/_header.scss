@@ -1,0 +1,54 @@
+.header{
+    height: 70px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__button{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        &-lines{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 24px;
+            height: 19px;
+        }
+        &-line{
+            height: 3px;
+            background: #2B3845;
+            &_1,
+            &_3{
+                width: 100%;
+            }
+            &_2{
+                width: 15px;
+            }
+        }
+        &-text{
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 28px;
+            color: #2B3845;
+        }
+    }
+    &__tel{
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 80%;
+        text-transform: uppercase;
+        color: #2B3845;
+        text-decoration: none;
+        width: 300px;
+    }
+}

@@ -1,0 +1,99 @@
+.intro{
+    position: relative;
+    min-height: calc(100vh - 70px);
+    isolation: isolate;
+    display: flex;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -200px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #FFF;
+        max-width: 926px;
+        width: 100%;
+    }
+    &__p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20.1648px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+        max-width: 630px;
+        width: 100%;
+        margin-bottom: 54px;
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        &:active{
+            text-decoration: none;
+        }
+        &:hover{
+            span{
+                color: #DCC39E;
+            }
+        }
+        span{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+            transition: 300ms ease;
+            margin-bottom: 10px;
+        }
+        svg{
+            animation: scroll 2s infinite;
+        }
+    }
+}
+@keyframes scroll {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

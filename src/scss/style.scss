@@ -1,0 +1,53 @@
+// Главный Sass файл
+
+// Шрифты
+@import "fonts";
+
+// abstracts
+@import 
+    'abstracts/variables',
+    'abstracts/functions',
+    'abstracts/mixins',
+    'abstracts/placeholders';
+
+// vendors
+// @import 'vendors/bootstrap'
+
+// themes
+@import 
+    'themes/theme',
+    'themes/admin';
+
+// base
+@import 
+    'base/reset',
+    'base/typography';
+
+// layout
+@import 
+    'layout/navigation',
+    'layout/grid',
+    'layout/header',
+    'layout/footer',
+    'layout/sidebar',
+    'layout/intro',
+    'layout/about',
+    'layout/developer',
+    'layout/offer',
+    'layout/floor',
+    'layout/amenities',
+    'layout/brochure',
+    'layout/location',
+    'layout/interior',
+    'layout/forms';
+
+// components
+@import 
+    'components/buttons',
+    'components/carousel',
+    'components/cover',
+    'components/dropdown';
+
+// pages
+@import 
+    'pages/home';

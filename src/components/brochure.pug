@@ -1,0 +1,33 @@
+mixin brochure()
+    section.brochure#brochure 
+        .brochure__body.container
+            .brochure__wrapper 
+                .brochure__item.brochure__content  
+                    h2.brochure__title Brochure 
+                    p.brochure__p Immerse yourself in the world of luxury with the Harbour Lights brochure, a beautifully designed publication that showcases the unparalleled living experience offered by the tower.
+                .brochure__item.brochure__img 
+                    img(src="@img/brochure.png", alt="" draggable="false")
+                    .brochure__form
+                        h3.brochure__form-title REQUEST <br>A BROCHURE 
+                        p.brochure__form-p with detailed information that includes:
+                        .brochure__form-tag 
+                            .brochure__form-tag-item Lifestyle
+                            .brochure__form-tag-item Gallery
+                            .brochure__form-tag-item Prices
+                            .brochure__form-tag-item Masterplan
+                        form(action="#" method="post").brochure__form-content 
+                            .brochure__form-item 
+                                label(for="name").brochure__form-item-label Your name
+                                input(type="text" placeholder="Enter your name").brochure__form-item-input  
+                            .brochure__form-item 
+                                label(for="name").brochure__form-item-label Your e-mail
+                                input(type="text" placeholder="Enter your e-mail").brochure__form-item-input  
+                            .brochure__form-item 
+                                label(for="name").brochure__form-item-label Phone number
+                                input(type="text" placeholder="Enter phone number").brochure__form-item-input  
+                            button(type="submit").brochure__form-btn.btn_2 DOWNLOAD BROCHURE 
+                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 15L6 -2.62268e-07M6 15C6 11.7208 8.68629 9.0625 12 9.0625M6 15C6 11.7208 3.31371 9.0625 3.19121e-07 9.0625" stroke="#FBFAF4" stroke-width="2"/>
+                                </svg>
+
+

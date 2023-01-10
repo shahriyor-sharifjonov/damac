@@ -1,0 +1,12 @@
+mixin header() 
+    header.header#header  
+        nav.header__nav.container
+            button(type="button").header__button.hover  
+                .header__button-lines 
+                    span.header__button-line.header__button-line_1 
+                    span.header__button-line.header__button-line_2 
+                    span.header__button-line.header__button-line_3 
+                span.header__button-text Menu 
+            a(href="#").header__logo 
+                img(src="@img/logo.svg", alt="" draggable="false") 
+            a(href="#!").header__tel.hover +971 56 XXX-XX-XX <span>SHOW</span> 

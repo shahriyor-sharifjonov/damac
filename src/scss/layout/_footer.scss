@@ -1,0 +1,42 @@
+.footer{
+    padding: 100px 0 50px 0;
+    background: #2B3845;
+    position: relative;
+    &__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo{
+        margin-bottom: 50px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50px;
+        list-style-type: none;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 200%;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 118px;
+        right: 95px;
+    }
+}
