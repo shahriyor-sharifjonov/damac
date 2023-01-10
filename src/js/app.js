@@ -21,6 +21,23 @@ function format_number(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+document.querySelectorAll('.amenities__item').forEach(el => {
+  const observer = new window.IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      // enter
+      el.classList.add('visible');
+      return
+    }
+    // leave
+    el.classList.remove('visible');
+  }, {
+    root: null,
+    threshold: 0.9,
+  })
+  observer.observe(el);
+})
+
+
 const n = document.querySelectorAll(".count");
 n.forEach((el) => {
   let value = { val: parseInt(el.getAttribute("data-number")) };
@@ -195,7 +212,25 @@ window.addEventListener('touchend', mouseup, false);
 window.addEventListener('mouseup', mouseup, false);
 // !cursor end
 
+gsap.utils.toArray(".about").forEach(el => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      scrub: false, 
+      onEnter: () => {
+        document.querySelector('.about__bg').classList.add('visible');
+      }
+    }, 
+    defaults: {ease: "none"} 
+  });
+  tl.from(".about__title span", 1, {y: 120, ease: "power1.out", delay: 1, skewY: 17, stagger: {amount: 0}}, "-=1.1")
+  tl.from(".about__desc",  {y: 50, ease: "power1.out", opacity: 0})
+  tl.from(".about__btn",  {x: -50, ease: "power1.out", opacity: 0})
+})
+
 let sections = gsap.utils.toArray(".amenities__item");
+let sectionsImg = gsap.utils.toArray(".amenities__item-img");
 let sections2 = gsap.utils.toArray(".brochure__item");
 
 gsap.to(sections, {
@@ -210,7 +245,7 @@ gsap.to(sections, {
     end: () =>
       "+=" + document.querySelector(".amenities__wrapper").offsetWidth,
   },
-});
+})
 gsap.to(sections2, {
   xPercent: -100 * (sections2.length - 1),
   ease: "none",
@@ -233,7 +268,6 @@ gsap.to(".interior__wrapper", {
     end: "bottom bottom",
   },
 });
-
 $(document).ready(function() {
   $(".accordion > .accordion__button").on("click", function() {
     if ($(this).hasClass("active")) {

@@ -1,39 +1,63 @@
 .amenities{
     background: #2B3845;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     &__body{
         position: relative;
         width: 100%;
         overflow-x: visible;
+        overflow-y: hidden;
     }
     &__wrapper{
         display: flex;
         justify-content: flex-start;
         width: max-content;
-        gap: 70px;
-        padding: 70px 70px 70px 0;
     }
     &__item{
-        width: 1140px;
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        position: relative;
+        line-height: 0;
+        &.visible{
+            .amenities__item-img img{
+                transition: 2000ms ease;
+                transform: scale(1);
+            }
+        }
         &.last{
             width: 100px;
         }
         &-title{
-            font-weight: 400;
+            font-weight: 600;
             font-size: 45px;
             line-height: 55px;
-            text-align: left;
+            text-align: center;
             color: #DCC39E;
-            margin-bottom: 24px;
+            position: absolute;
+            z-index: 5;
+            background: #2B3845;
+            top: 50px;
+            left: 30px;
+            padding: 15px 20px;
         }
         &-img{
             width: 100%;
+            height: 100%;
             line-height: 0;
+            position: relative;
+            overflow: hidden;
             img{
+                position: absolute;
+                left: 0;
+                bottom: 0;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                line-height: 0;
+                transform: scale(1.5);
+                transition: 20000ms ease;
+                will-change: transform;
             }
         }
     }

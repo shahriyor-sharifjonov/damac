@@ -535,19 +535,45 @@ button {
   }
 }
 
-.no-webp .about {
-  background: url("../img/about-background.png"), #2B3845; }
-
 .about {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
   isolation: isolate;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #2B3845;
+}
+
+.about__bg {
+  position: absolute;
+  -webkit-transform: translateY(-25%) scale(1);
+      -ms-transform: translateY(-25%) scale(1);
+          transform: translateY(-25%) scale(1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2B3845;
+  z-index: -2;
+  opacity: 0;
+  -webkit-transition: 6000ms ease;
+  -o-transition: 6000ms ease;
+  transition: 6000ms ease;
+  will-change: transform;
+}
+
+.about__bg.visible {
+  opacity: 1;
+  -webkit-transform: translateY(-10%) scale(1.3);
+      -ms-transform: translateY(-10%) scale(1.3);
+          transform: translateY(-10%) scale(1.3);
+}
+
+.about__bg img {
+  width: 100%;
+  height: 100%;
 }
 
 .about::before {
@@ -570,7 +596,7 @@ button {
   left: 0;
   width: 100%;
   height: 50%;
-  z-index: -1;
+  z-index: -2;
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -615,6 +641,14 @@ button {
   line-height: 100%;
   color: #FFFFFF;
   margin-bottom: 28px;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.about__title span {
+  position: absolute;
 }
 
 .about__desc {
@@ -1196,13 +1230,14 @@ button {
 .amenities {
   background: #2B3845;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .amenities__body {
   position: relative;
   width: 100%;
   overflow-x: visible;
+  overflow-y: hidden;
 }
 
 .amenities__wrapper {
@@ -1215,12 +1250,23 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  gap: 70px;
-  padding: 70px 70px 70px 0;
 }
 
 .amenities__item {
-  width: 1140px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  line-height: 0;
+}
+
+.amenities__item.visible .amenities__item-img img {
+  -webkit-transition: 2000ms ease;
+  -o-transition: 2000ms ease;
+  transition: 2000ms ease;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .amenities__item.last {
@@ -1228,24 +1274,43 @@ button {
 }
 
 .amenities__item-title {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 45px;
   line-height: 55px;
-  text-align: left;
+  text-align: center;
   color: #DCC39E;
-  margin-bottom: 24px;
+  position: absolute;
+  z-index: 5;
+  background: #2B3845;
+  top: 50px;
+  left: 30px;
+  padding: 15px 20px;
 }
 
 .amenities__item-img {
   width: 100%;
+  height: 100%;
   line-height: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .amenities__item-img img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  line-height: 0;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 20000ms ease;
+  -o-transition: 20000ms ease;
+  transition: 20000ms ease;
+  will-change: transform;
 }
 
 .brochure {
@@ -1864,5 +1929,3 @@ button {
     margin-bottom: 20px;
   }
 }
-
-.webp .about { background: url(../img/about-background.webp), #2B3845; }
