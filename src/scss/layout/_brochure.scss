@@ -79,6 +79,7 @@
             color: #2D2D2D;
             opacity: 0.4;
             margin-bottom: 44px;
+            display: none;
         }
         &-item{
             display: flex;
@@ -106,7 +107,6 @@
         &-tag{
             margin-bottom: 40px;
             display: flex;
-            flex-wrap: wrap;
             gap: 15px 40px;
             &-item{
                 display: flex;

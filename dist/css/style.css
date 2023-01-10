@@ -145,13 +145,12 @@ button {
 .btn,
 .btn_2 {
   background: #FFFFFF;
-  border-radius: 5px;
-  padding: 16px 50px;
+  padding: 15px 20px;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #101D2A;
+  color: #2B3845;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,7 +213,6 @@ button {
 }
 
 .header {
-  height: 70px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +223,9 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  height: 70px;
+  z-index: 50;
 }
 
 .header__nav {
@@ -294,13 +295,22 @@ button {
 }
 
 .header__tel {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 23px;
   line-height: 80%;
   text-transform: uppercase;
   color: #2B3845;
   text-decoration: none;
   width: 300px;
+}
+
+.header__tel span {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 80%;
+  text-transform: uppercase;
+  color: #2B3845;
+  margin-left: 4px;
 }
 
 .footer {
@@ -378,7 +388,7 @@ button {
 .intro::before {
   content: "";
   position: absolute;
-  bottom: -200px;
+  bottom: -110px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -426,7 +436,7 @@ button {
   font-size: 80px;
   line-height: 100%;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #FFF;
   max-width: 926px;
   width: 100%;
@@ -435,7 +445,7 @@ button {
 .intro__p {
   font-style: normal;
   font-weight: 400;
-  font-size: 20.1648px;
+  font-size: 20px;
   line-height: 150%;
   text-align: center;
   color: #FFFFFF;
@@ -595,16 +605,16 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
-  max-width: 457px;
+  width: calc(50% + 20px);
+  max-width: 588px;
 }
 
 .about__title {
   font-weight: 600;
-  font-size: 45px;
+  font-size: 60px;
   line-height: 100%;
   color: #FFFFFF;
-  margin-bottom: 47px;
+  margin-bottom: 28px;
 }
 
 .about__desc {
@@ -629,7 +639,7 @@ button {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 55px 40px;
-  width: 50%;
+  width: calc(50% - 100px);
 }
 
 .about__col {
@@ -712,7 +722,7 @@ button {
   letter-spacing: 0.01em;
   color: #FFFFFF;
   text-align: center;
-  max-width: 712px;
+  max-width: 892px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -736,8 +746,8 @@ button {
 
 .developer__p {
   margin-right: 128px;
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 300;
+  font-size: 22px;
   line-height: 150%;
   color: #FFFFFF;
   max-width: 509px;
@@ -791,7 +801,7 @@ button {
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .offer__title {
@@ -881,11 +891,11 @@ button {
 }
 
 .floor__title {
-  font-weight: 500;
-  font-size: 50px;
-  line-height: 63px;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 73px;
   text-align: center;
-  color: #000000;
+  color: #2B3845;
   margin-bottom: 30px;
 }
 
@@ -1054,10 +1064,9 @@ button {
 .floor__tab-item {
   padding: 8px 22px;
   font-weight: 400;
-  font-size: 16.426px;
+  font-size: 16px;
   line-height: 20px;
   border: 2px solid #1D1C1C;
-  border-radius: 5px;
   text-align: center;
   color: #000000;
   display: -webkit-box;
@@ -1351,6 +1360,7 @@ button {
   color: #2D2D2D;
   opacity: 0.4;
   margin-bottom: 44px;
+  display: none;
 }
 
 .brochure__form-item {
@@ -1389,8 +1399,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 15px 40px;
 }
 
@@ -1459,7 +1467,7 @@ button {
 
 .location__acc .accordion__button {
   font-weight: 400;
-  font-size: 23.29px;
+  font-size: 22px;
   line-height: 144%;
   color: #FFFFFF;
   display: -webkit-box;
@@ -1642,7 +1650,7 @@ button {
 
 .interior__p {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 150%;
   color: #FFFFFF;
   max-width: 558px;

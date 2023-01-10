@@ -38,15 +38,15 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        width: 50%;
-        max-width: 457px;
+        width: calc(50% + 20px);
+        max-width: 588px;
     }
     &__title{
         font-weight: 600;
-        font-size: 45px;
+        font-size: 60px;
         line-height: 100%;
         color: #FFFFFF;
-        margin-bottom: 47px;
+        margin-bottom: 28px;
     }
     &__desc{
         font-weight: 400;
@@ -62,7 +62,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 55px 40px;
-        width: 50%;
+        width: calc(50% - 100px);
         // max-width: 442px;
     }
     &__col{

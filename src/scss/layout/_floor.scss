@@ -5,11 +5,11 @@
         padding-top: 0; 
     }
     &__title{
-        font-weight: 500;
-        font-size: 50px;
-        line-height: 63px;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 73px;
         text-align: center;
-        color: #000000;
+        color: #2B3845;
         margin-bottom: 30px;
         @include media(992){
             font-weight: 500;
@@ -149,10 +149,9 @@
         &-item{
             padding: 8px 22px;
             font-weight: 400;
-            font-size: 16.426px;
+            font-size: 16px;
             line-height: 20px;
             border: 2px solid #1D1C1C;
-            border-radius: 5px;
             text-align: center;
             color: #000000;
             display: flex;
