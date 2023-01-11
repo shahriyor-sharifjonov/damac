@@ -1,0 +1,36 @@
+mixin popup()
+    .popup#register 
+        .popup__overlay.popup-close 
+        .popup__body
+            .popup__content
+                p.popup__title <span>Get information</span> on availabilities
+                p.popup__p Get detailed information that includes :
+                .popup__tag 
+                    .popup__tag-item
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                        </svg>
+                        span Masterplan
+                    .popup__tag-item
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                        </svg>
+                        span Gallery
+                    .popup__tag-item
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                        </svg>
+                        span Lifestyle
+                    .popup__tag-item
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                        </svg>
+                        span Floor plans
+            form(action="#" method="post").popup__form
+                .popup__input
+                    input(type="text" placeholder="Your name")
+                .popup__input
+                    input(type="text" placeholder="Your email")
+                .popup__input
+                    input(type="text" placeholder="Your number")
+                button(type="submit").popup__button Download 
