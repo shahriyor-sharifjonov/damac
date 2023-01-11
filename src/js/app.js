@@ -32,7 +32,7 @@ document.querySelectorAll('.amenities__item').forEach(el => {
     el.classList.remove('visible');
   }, {
     root: null,
-    threshold: 0.9,
+    threshold: 0.7,
   })
   observer.observe(el);
 })
