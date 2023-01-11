@@ -7,19 +7,21 @@
     background: #2B3845;
     &__bg{
         position: absolute;
-        transform: translateY(-25%) scale(1);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: -534px;
+        left: -100px;
+        width: 2445px;
+        height: 1298px;
         background: #2B3845;
         z-index: -2;
         opacity: 0;
-        transition: 6000ms ease;
+        transition: 5000ms ease;
         will-change: transform;
         &.visible{
             opacity: 1;
-            transform: translateY(-10%) scale(1.3);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
         }
         img{
             width: 100%;
