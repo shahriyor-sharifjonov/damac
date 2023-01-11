@@ -429,6 +429,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
   height: 100%;
 }
 
@@ -1835,6 +1836,10 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .intro__background img {
+    width: auto;
+  }
+
   .intro__title {
     font-size: 74px;
   }
@@ -1981,5 +1986,11 @@ button {
 
   .intro__p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .intro__background img {
+    right: -150px;
   }
 }
