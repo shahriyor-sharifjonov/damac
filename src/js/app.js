@@ -32,7 +32,7 @@ document.querySelectorAll('.amenities__item').forEach(el => {
     el.classList.remove('visible');
   }, {
     root: null,
-    threshold: 0.7,
+    threshold: 0.9,
   })
   observer.observe(el);
 })
@@ -230,7 +230,6 @@ gsap.utils.toArray(".about").forEach(el => {
 })
 
 let sections = gsap.utils.toArray(".amenities__item");
-let sectionsImg = gsap.utils.toArray(".amenities__item-img");
 let sections2 = gsap.utils.toArray(".brochure__item");
 
 gsap.to(sections, {
