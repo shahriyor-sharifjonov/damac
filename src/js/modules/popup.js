@@ -9,6 +9,9 @@ function close() {
     })
 }
 
+const el = document.querySelector('body').getBoundingClientRect(); //234,66 235
+console.log(el.height);
+
 export function init() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -17,7 +20,7 @@ export function init() {
             console.log(target);
             popup.classList.add('active');
             document.body.style.overflowY = 'hidden';
-        });
+        }); 
     });
 
     closeButtons.forEach(closeButton => {

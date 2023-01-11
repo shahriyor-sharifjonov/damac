@@ -22,7 +22,7 @@ export function init() {
     
     document.querySelector('.fixed').appendChild(cursor);
     document.querySelector('.fixed').appendChild(cursorF);
-      
+
     if ('ontouchstart' in window) {
         cursor.style.display = 'none';
         cursorF.style.display = 'none';
