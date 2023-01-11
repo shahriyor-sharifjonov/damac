@@ -8,7 +8,7 @@ import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
 functions.isWebp();
 gsap.registerPlugin(ScrollTrigger);
 // SmoothScroll({
-//   animationTime: 1000,
+//   animationTime: 500,
 //   stepSize: 60,
 //   keyboardSupport: true,
 //   arrowScroll: 100,
