@@ -1,3 +1,16 @@
+include components/header 
+include components/intro 
+include components/about 
+include components/amenities 
+include components/floor 
+include components/interior 
+include components/location 
+include components/offer 
+include components/developer 
+include components/brochure 
+include components/footer 
+include components/popup 
+
 doctype html 
 html(lang="en") 
     head 
@@ -6,29 +19,19 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0") 
         link(rel="stylesheet", href="css/style.min.css") 
         title Damac 
-    body  
+    body 
         .fixed 
         .wrapper 
-            include components/header 
-            +header  
-            include components/intro 
-            +intro  
-            include components/about 
+            +header 
+            +intro 
             +about 
-            include components/amenities 
             +amenities 
-            include components/floor 
-            +floor
-            include components/interior 
-            +interior
-            include components/location 
+            +floor 
+            +interior 
             +location 
-            include components/offer 
             +offer 
-            include components/developer 
             +developer 
-            include components/brochure 
             +brochure 
-            include components/footer 
             +footer 
+        +popup 
         script(src="js/app.min.js") 
