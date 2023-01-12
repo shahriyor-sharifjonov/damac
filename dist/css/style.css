@@ -218,6 +218,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -958,6 +959,7 @@ button {
 }
 
 .floor {
+  display: none;
   padding: 100px 0 100px 0;
   background: #fff;
 }
@@ -1266,6 +1268,7 @@ button {
 }
 
 .amenities {
+  display: none;
   background: #2B3845;
   position: relative;
   overflow: hidden;
@@ -1692,6 +1695,7 @@ button {
 }
 
 .interior {
+  display: none;
   background: #2B3845;
   width: 100%;
   overflow-x: clip;

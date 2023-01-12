@@ -73,7 +73,7 @@ export function init() {
             onLeave: () => {
                 const nextSection = document.querySelector('.footer');
                 const tl = gsap.timeline()
-                tl.to(window, 0.1, { scrollTo: {y: nextSection.offsetTop}});
+                // tl.to(window, 0.1, { scrollTo: {y: nextSection.offsetTop}});
             }
         },
     });
