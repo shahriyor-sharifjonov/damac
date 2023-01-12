@@ -2224,6 +2224,11 @@ button {
   .floor__navigation {
     width: 566px;
   }
+
+  .location__img img {
+    -o-object-position: -100px;
+       object-position: -100px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2397,6 +2402,16 @@ button {
   .floor__item-btn {
     max-width: 300px;
     width: 100%;
+  }
+
+  .location__acc {
+    top: auto;
+    bottom: 0;
+  }
+
+  .location__img img {
+    -o-object-position: -150px;
+       object-position: -150px;
   }
 }
 

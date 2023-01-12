@@ -9,6 +9,10 @@
         background: #2F3B46;
         z-index: 3;
         padding: 46px 40px;
+        @include media(992){
+            top: auto;
+            bottom: 0;
+        }
         .accordion{
             &__button{
                 font-weight: 400;
@@ -89,6 +93,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @include media(1200){
+                object-position: -100px;
+            }
+            @include media(992){
+                object-position: -150px;
+            }
         }
     }
 }
