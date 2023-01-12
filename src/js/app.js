@@ -21,5 +21,6 @@ counter.init();
 cursor.init();
 slider.init();
 popup.init();
-header.init();
+functions.showmore();
 amenities.init();
+header.init();

@@ -11,3 +11,24 @@ export function isWebp() {
         document.documentElement.classList.add(className);
     });
 }
+
+
+export function showmore() {
+    if(document.querySelector('.showmore')){
+        const buttons = document.querySelectorAll('.showmore');
+        buttons.forEach(button => {
+            let more = false
+            button.addEventListener('click', () => {
+                more = !more
+                const target = button.getAttribute('data-target')
+                const el = document.querySelector(target);
+                el.classList.toggle('more')
+                if(more){
+                    button.innerHTML = 'Hide'
+                }else{
+                    button.innerHTML = 'View More'
+                }
+            })
+        })
+    }
+}

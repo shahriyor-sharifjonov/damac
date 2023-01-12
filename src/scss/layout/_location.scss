@@ -20,11 +20,12 @@
             bottom: 0;
         }
         @include media(768){
-            padding: 23px 26px;
-        }
-        @include media(400){
             width: 100%;
+            padding: 10px 26px;
         }
+        // @include media(400){
+        //     width: 100%;
+        // }
         .accordion{
             &__button{
                 font-weight: 400;
