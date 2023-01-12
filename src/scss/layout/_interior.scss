@@ -71,12 +71,16 @@
             }
             &_2{
                 position: absolute;
-                bottom: 50px;
-                right: -236px;
+                bottom: 30px;
+                right: -226px;
+                height: 350px;
+                width: 300px;
                 &.not{
                     position: relative;
                     bottom: 0;
                     right: 0;
+                    height: auto;
+                    width: auto;
                 }
             }
         }
@@ -92,7 +96,7 @@
             margin-right: 60px;
             width: 552px;
             font-weight: 400;
-            font-size: 22px;
+            font-size: 18px;
             line-height: 150%;
             color: #FFFFFF;
             &.not{
