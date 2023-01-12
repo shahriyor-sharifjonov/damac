@@ -2920,6 +2920,10 @@ button {
   .location__acc {
     padding: 23px 26px;
   }
+
+  .interior-mobile .swiper {
+    aspect-ratio: 4/3;
+  }
 }
 
 @media (max-width: 576px) {
@@ -3045,6 +3049,10 @@ button {
 
   .location {
     height: 700px;
+  }
+
+  .interior-mobile .swiper {
+    aspect-ratio: 6/5;
   }
 }
 
