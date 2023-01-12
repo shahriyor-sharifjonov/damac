@@ -93,16 +93,14 @@
         line-height: 100%;
         color: #FFFFFF;
         margin-bottom: 25px;
-        // position: relative;
         width: 100%;
         height: auto;
-        // overflow: hidden;
-        text-align: center;
         @media (max-width: 1200px) {
             font-size: 50px;
         }
         @media (max-width: 992px) {
             font-size: 44px;
+            text-align: center;
         }
         @media (max-width: 768px) {
             font-size: 40px;
