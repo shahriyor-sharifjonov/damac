@@ -667,6 +667,8 @@ button {
 .about__bg img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about::before {
@@ -1815,12 +1817,28 @@ button {
 }
 
 .brochure__sm .brochure__form-content {
-  -webkit-filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
-          filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
-  width: 80%;
   margin: 0 auto;
   border-radius: 0;
   margin-bottom: 48px;
+  position: relative;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 100%;
+  padding: 30px 100px;
+  margin: 0;
+}
+
+.brochure__sm .brochure__form-content::before {
+  content: "";
+  background: #FFFFFF;
+  -webkit-filter: blur(5.5px);
+          filter: blur(5.5px);
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -25px;
+  height: 40px;
 }
 
 .brochure__sm .brochure__form-item {
@@ -1830,6 +1848,7 @@ button {
 .brochure__sm .brochure__form-item-input {
   font-weight: 700;
   color: #37485A;
+  font-family: "Montserrat";
 }
 
 .brochure__sm .brochure__form-item-input::-webkit-input-placeholder {
@@ -2196,7 +2215,7 @@ button {
 }
 
 .interior-mobile__body {
-  padding: 80px 15px 0;
+  padding: 30px 15px;
 }
 
 .interior-mobile__title {
@@ -2206,7 +2225,7 @@ button {
   color: white;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 .interior-mobile__paragraph {
@@ -2215,7 +2234,7 @@ button {
   max-width: 600px;
   width: 100%;
   text-align: center;
-  margin: 30px auto 80px;
+  margin: 10px auto 0px auto;
 }
 
 .interior-mobile .swiper {
@@ -2282,6 +2301,91 @@ button {
 
 .popup.floorplan-popup .popup__body {
   padding: 0;
+}
+
+.popup.handover-popup {
+  padding: 40px 20px;
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup.handover-popup .popup__close {
+  width: 40px;
+  height: 40px;
+  background-color: #2B3845;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup.handover-popup .popup__body {
+  width: 100%;
+  max-width: 926px;
+  background: #404C58;
+  border-radius: 5px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.popup.handover-popup .popup__body-rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px 24px;
+  max-width: 696px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.popup.handover-popup .popup__body-col {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.popup.handover-popup .popup__body-item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
+
+.popup.handover-popup .popup__overlay {
+  background: #2B3845;
+  color: #fff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 250%;
+  letter-spacing: 0.01em;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: none;
 }
 
 .popup__body {
@@ -2850,10 +2954,13 @@ button {
   }
 
   .intro::before {
-    bottom: -150px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(71.35%, #2B3845));
-    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 71.35%);
-    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 71.35%);
+    bottom: auto;
+    top: 0;
+    height: 1150px;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(61.35%, #2B3845));
+    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
+    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
   }
 
   .intro__title {
@@ -3255,6 +3362,13 @@ button {
     width: 100%;
   }
 
+  .brochure__sm .brochure__form-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 60px;
+    margin: 0;
+  }
+
   .location__acc {
     width: 100%;
     padding: 10px 26px;
@@ -3262,6 +3376,65 @@ button {
 
   .interior-mobile .swiper {
     aspect-ratio: 4/3;
+  }
+
+  .popup.handover-popup .popup__body {
+    height: inherit;
+    padding: 0 0;
+    border-radius: 0;
+    background-color: #2B3845;
+  }
+
+  .popup.handover-popup .popup__body::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  .popup.handover-popup .popup__body ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .popup.handover-popup .popup__body ::-webkit-scrollbar-thumb {
+    background: #EBDDC8;
+  }
+
+  .popup.handover-popup .popup__body-rows {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .popup.handover-popup .popup__body-rows::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  .popup.handover-popup .popup__body-rows ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  .popup.handover-popup .popup__body-rows ::-webkit-scrollbar-thumb {
+    background: #EBDDC8;
+  }
+
+  .popup.handover-popup .popup__body-col:first-child {
+    padding-top: 20px;
+  }
+
+  .popup.handover-popup .popup__body-col:last-child {
+    padding-bottom: 20px;
+  }
+
+  .popup.handover-popup .popup__body-item {
+    padding: 4px 20px;
+  }
+
+  .popup.handover-popup .popup__close {
+    display: none;
+  }
+
+  .popup.handover-popup .popup__overlay {
+    display: block;
   }
 }
 
@@ -3288,12 +3461,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .intro::before {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(81.35%, #2B3845));
-    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 81.35%);
-    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 81.35%);
   }
 
   .intro__background img {
@@ -3417,11 +3584,6 @@ button {
   .brochure__sm .brochure__form-item-input::placeholder {
     font-size: 12px;
     line-height: 176%;
-  }
-
-  .brochure__sm .brochure__form-content {
-    width: 100%;
-    max-width: 300px;
   }
 
   .brochure__sm .btn_2 {

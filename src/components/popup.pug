@@ -8,11 +8,11 @@ mixin popup()
                 </svg>
             .popup__bg.multiple
                 .popup__bg-img.first.active
-                    img(src="@img/popup-1.png", alt="" draggable="false")
+                    img(src="@img/popup-1.png" alt="" draggable="false")
                 .popup__bg-img 
-                    img(src="@img/popup-2.png", alt="" draggable="false")
+                    img(src="@img/popup-2.png" alt="" draggable="false")
                 .popup__bg-img.last 
-                    img(src="@img/popup-3.png", alt="" draggable="false")
+                    img(src="@img/popup-3.png" alt="" draggable="false")
             .popup__content
                 p.popup__title <span>Get information</span> on availabilities
                 p.popup__p that includes :
@@ -40,15 +40,22 @@ mixin popup()
                             span Floor plans
             form(action="#" method="post").popup__form
                 .popup__input
-                    input(type="text" placeholder="Your name")
+                    input(type="text" name='name' placeholder="Your name" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type="text" placeholder="Your email")
+                    input(type='email' name='email' placeholder="Your email" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type="text" placeholder="Your number")
+                    input(type='tel' name='phone' placeholder="Your number" required)
                     .popup__input-hr 
+                input(type="hidden" name="project" value="damac")
+                input(type="hidden" name="description" value="page_form")
+                input(type="hidden" name="duration" value="").duration
+                input(type="hidden" name="pasted_fields" value="").pasted_fields
+                input(type="hidden" name="language" value="english")
+                input(type="hidden" name="current_page" value="")
                 button(type="submit").popup__button.hover Download 
+<<<<<<< HEAD
     .floor-plan.popup#floorPopup
         .blur.floor-modal__close
         .floor-plan__modal 
@@ -93,3 +100,44 @@ mixin popup()
                             <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.7109 11.9925L11.8637 10.3519C11.6652 10.2629 11.4472 10.226 11.2305 10.2447C11.0138 10.2633 10.8054 10.3369 10.625 10.4585L8.56602 11.8285C7.31114 11.219 6.29513 10.2087 5.67852 8.95736L7.04023 6.87377C7.16102 6.6932 7.23479 6.48532 7.25484 6.26901C7.2749 6.05269 7.24061 5.8348 7.15508 5.6351L5.50625 1.78783C5.39119 1.52805 5.19638 1.31167 4.95006 1.17007C4.70374 1.02848 4.41872 0.969022 4.13633 1.00033C3.02857 1.14545 2.0112 1.6879 1.27337 2.52682C0.535545 3.36574 0.127463 4.44405 0.125 5.56127C0.125 12.0746 5.42422 17.3738 11.9375 17.3738C13.0547 17.3713 14.133 16.9632 14.972 16.2254C15.8109 15.4876 16.3533 14.4702 16.4984 13.3624C16.5297 13.0801 16.4703 12.795 16.3287 12.5487C16.1871 12.3024 15.9707 12.1076 15.7109 11.9925Z" fill="white"/>
                             </svg>
+=======
+    .popup.floorplan-popup#floorPopup  
+        .popup__overlay.popup-close 
+        .popup__body
+            button(type="button").popup-close.popup__close.hover 
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+
+    .popup.handover-popup#handover-popup
+        .popup__body
+            button(type="button").popup-close.popup__close.hover 
+                <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            .popup__body-rows
+                .popup__body-col 
+                    .popup__body-item 5% Within 3 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 6 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 9 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 12 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 15 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 18 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 21 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 24 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 27 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 30 Month(s) Of Sale Date
+                .popup__body-col 
+                    .popup__body-item 3% Within 33 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 36 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 39 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 42 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 45 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 48 Month(s) Of Sale Date
+                    .popup__body-item 2% On 70% Completion Milestone
+                    .popup__body-item 1% On 80% Completion Milestone
+                    .popup__body-item 1% On 90% Completion Milestone
+                    .popup__body-item 20% On Completion
+        .popup__overlay.popup-close Back
+
+>>>>>>> refs/remotes/origin/main
