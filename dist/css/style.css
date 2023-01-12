@@ -1708,9 +1708,9 @@ button {
 }
 
 .location__acc .accordion__button.active svg {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .location__acc .accordion__content {
@@ -2339,6 +2339,11 @@ button {
   .floor__navigation {
     width: 566px;
   }
+
+  .location__img img {
+    -o-object-position: -100px;
+       object-position: -100px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2521,6 +2526,22 @@ button {
   .amenities__carousel {
     display: block;
   }
+
+  .location__acc {
+    top: auto;
+    bottom: 0;
+  }
+
+  .location__acc .accordion__button svg {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+
+  .location__img img {
+    -o-object-position: -150px;
+       object-position: -150px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2636,6 +2657,10 @@ button {
   .floor__item-info-row {
     margin-bottom: 20px;
   }
+
+  .location__acc {
+    padding: 23px 26px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2695,10 +2720,24 @@ button {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .location {
+    height: 700px;
+  }
 }
 
 @media (max-width: 420px) {
   .intro__background img {
     right: -150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .location {
+    height: 600px;
+  }
+
+  .location__acc {
+    width: 100%;
   }
 }

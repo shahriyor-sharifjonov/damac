@@ -1,6 +1,12 @@
 .location{
     height: 100vh;
     position: relative;
+    @include media(576){
+        height: 700px;
+    }
+    @include media(400){
+        height: 600px;
+    }
     &__acc{
         position: absolute;
         top: 0;
@@ -9,6 +15,16 @@
         background: #2F3B46;
         z-index: 3;
         padding: 46px 40px;
+        @include media(992){
+            top: auto;
+            bottom: 0;
+        }
+        @include media(768){
+            padding: 23px 26px;
+        }
+        @include media(400){
+            width: 100%;
+        }
         .accordion{
             &__button{
                 font-weight: 400;
@@ -22,10 +38,13 @@
                 cursor: pointer;
                 svg{
                     transition: 300ms ease;
+                    @include media(992){
+                        transform: rotate(-180deg);
+                    }
                 }
                 &.active{
                     svg{
-                        transform: rotate(-180deg);
+                        transform: rotate(0deg);
                     }
                 }
             }
@@ -89,6 +108,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @include media(1200){
+                object-position: -100px;
+            }
+            @include media(992){
+                object-position: -150px;
+            }
+            // @include media(576){
+            //     object-position: -200px;
+            // }
         }
     }
 }
