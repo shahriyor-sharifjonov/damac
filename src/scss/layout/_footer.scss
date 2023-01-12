@@ -51,16 +51,4 @@
         color: #FFFFFF;
         opacity: 0.5;
     }
-    &__scroll{
-        position: absolute;
-        bottom: 118px;
-        right: 95px;
-        @include media(1200){
-            right: 50px;
-            top: 90px;
-        }
-        @include media(992){
-            display: none;
-        }
-    }
 }
