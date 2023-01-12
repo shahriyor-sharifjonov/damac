@@ -734,6 +734,7 @@ button {
   background: #2B3845;
   padding-top: 100px;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .developer__subtitle {
