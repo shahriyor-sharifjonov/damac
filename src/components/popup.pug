@@ -2,35 +2,50 @@ mixin popup()
     .popup#register 
         .popup__overlay.popup-close 
         .popup__body
+            button(type="button").popup-close.popup__close.hover 
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .popup__bg.multiple
+                .popup__bg-img.first.active
+                    img(src="@img/popup-1.png", alt="" draggable="false")
+                .popup__bg-img 
+                    img(src="@img/popup-2.png", alt="" draggable="false")
+                .popup__bg-img.last 
+                    img(src="@img/popup-3.png", alt="" draggable="false")
             .popup__content
                 p.popup__title <span>Get information</span> on availabilities
-                p.popup__p Get detailed information that includes :
+                p.popup__p that includes :
                 .popup__tag 
-                    .popup__tag-item
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
-                        </svg>
-                        span Masterplan
-                    .popup__tag-item
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
-                        </svg>
-                        span Gallery
-                    .popup__tag-item
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
-                        </svg>
-                        span Lifestyle
-                    .popup__tag-item
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
-                        </svg>
-                        span Floor plans
+                    .popup__tag-wrap
+                        .popup__tag-item
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                            </svg>
+                            span Masterplan
+                        .popup__tag-item
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                            </svg>
+                            span Gallery
+                        .popup__tag-item
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                            </svg>
+                            span Lifestyle
+                        .popup__tag-item
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 1.70498L5.5 13.705L0 8.20498L1.41 6.79498L5.5 10.875L16.09 0.294983L17.5 1.70498Z" fill="#DCC39E"/>
+                            </svg>
+                            span Floor plans
             form(action="#" method="post").popup__form
                 .popup__input
                     input(type="text" placeholder="Your name")
+                    .popup__input-hr 
                 .popup__input
                     input(type="text" placeholder="Your email")
+                    .popup__input-hr 
                 .popup__input
                     input(type="text" placeholder="Your number")
-                button(type="submit").popup__button Download 
+                    .popup__input-hr 
+                button(type="submit").popup__button.hover Download 
