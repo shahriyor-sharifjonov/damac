@@ -654,6 +654,8 @@ button {
 .about__bg img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about::before {
@@ -2771,10 +2773,13 @@ button {
   }
 
   .intro::before {
-    bottom: -150px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(71.35%, #2B3845));
-    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 71.35%);
-    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 71.35%);
+    bottom: auto;
+    top: 0;
+    height: 1150px;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(61.35%, #2B3845));
+    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
+    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
   }
 
   .intro__title {
@@ -3210,12 +3215,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .intro::before {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(81.35%, #2B3845));
-    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 81.35%);
-    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 81.35%);
   }
 
   .intro__background img {
