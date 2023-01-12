@@ -347,9 +347,14 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 10px 20px;
   margin-bottom: 50px;
   list-style-type: none;
+}
+
+.footer__list:nth-of-type(2) {
+  display: none;
+  gap: 30px;
 }
 
 .footer__link {
@@ -359,6 +364,7 @@ button {
   letter-spacing: 0.02em;
   color: #FFFFFF;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .footer__p {
@@ -734,6 +740,7 @@ button {
   background: #2B3845;
   padding-top: 100px;
   padding-bottom: 100px;
+  position: relative;
 }
 
 .developer__subtitle {
@@ -811,6 +818,30 @@ button {
 
 .developer__item:nth-of-type(1) {
   margin-right: 116px;
+}
+
+.developer__logo-mobile {
+  display: none;
+  width: 430px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.developer__logo-mobile img {
+  width: 100%;
+}
+
+.developer__img {
+  width: 150px;
+}
+
+.developer__img img {
+  width: 150px;
 }
 
 .developer__desc {
@@ -2126,6 +2157,17 @@ button {
 }
 
 @media (max-width: 1200px) {
+  .footer__list {
+    max-width: 992px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .footer__scroll {
+    right: 50px;
+    top: 90px;
+  }
+
   .intro__background img {
     width: auto;
   }
@@ -2151,6 +2193,26 @@ button {
     width: calc(50% - 15px);
   }
 
+  .developer__subtitle {
+    font-size: 28px;
+  }
+
+  .developer__title {
+    font-size: 50px;
+  }
+
+  .developer__p {
+    margin-right: 60px;
+  }
+
+  .developer__logo {
+    max-width: 300px;
+  }
+
+  .developer__logo img {
+    width: 100%;
+  }
+
   .offer__title {
     font-size: 54px;
   }
@@ -2165,6 +2227,10 @@ button {
 }
 
 @media (max-width: 992px) {
+  .footer__scroll {
+    display: none;
+  }
+
   .intro::before {
     bottom: -150px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(71.35%, #2B3845));
@@ -2222,6 +2288,37 @@ button {
 
   .about__col {
     width: calc(50% - 70px);
+  }
+
+  .developer__title {
+    font-size: 42px;
+    margin-bottom: 50px;
+  }
+
+  .developer__p {
+    font-size: 18px;
+  }
+
+  .developer__item:nth-of-type(1) {
+    margin-right: 50px;
+  }
+
+  .developer__logo {
+    max-width: 250px;
+  }
+
+  .developer__img {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .developer__img img {
+    width: 100%;
+  }
+
+  .developer__desc {
+    margin-right: 10px;
+    font-size: 18px;
   }
 
   .offer__wrapper {
@@ -2304,6 +2401,12 @@ button {
 }
 
 @media (max-width: 768px) {
+  .footer__list:nth-of-type(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .intro__title {
     font-size: 44px;
   }
@@ -2314,6 +2417,49 @@ button {
 
   .intro__btn {
     border-radius: 5px;
+  }
+
+  .developer__p {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .developer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .developer__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .developer__item:nth-of-type(1) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .developer__logo {
+    display: none;
+  }
+
+  .developer__logo-mobile {
+    display: block;
+  }
+
+  .developer__img {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+
+  .developer__desc {
+    text-align: center;
+    margin-right: 0;
+    max-width: 400px;
   }
 
   .offer__subtitle {
@@ -2370,6 +2516,13 @@ button {
 }
 
 @media (max-width: 576px) {
+  .footer__list:nth-of-type(1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .intro::before {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(81.35%, #2B3845));
     background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 81.35%);
@@ -2386,6 +2539,28 @@ button {
 
   .intro__p {
     font-size: 14px;
+  }
+
+  .developer__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .developer__row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+
+  .developer__logo-mobile {
+    width: 340px;
+  }
+
+  .developer__desc {
+    max-width: 300px;
   }
 
   .offer__title {

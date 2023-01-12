@@ -14,9 +14,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 10px 20px;
         margin-bottom: 50px;
         list-style-type: none;
+        @include media(1200){
+            max-width: 992px;
+            flex-wrap: wrap;
+        }
+        &:nth-of-type(1){
+            @include media(576){
+                flex-direction: column;
+            }
+        }
+        &:nth-of-type(2){
+            display: none;
+            gap: 30px;
+            @include media(768){
+                display: flex;
+            }
+        }
     }
     &__link{
         font-weight: 400;
@@ -25,6 +41,7 @@
         letter-spacing: 0.02em;
         color: #FFFFFF;
         text-decoration: none;
+        white-space: nowrap;
     }
     &__p{
         font-weight: 300;
@@ -38,5 +55,12 @@
         position: absolute;
         bottom: 118px;
         right: 95px;
+        @include media(1200){
+            right: 50px;
+            top: 90px;
+        }
+        @include media(992){
+            display: none;
+        }
     }
 }
