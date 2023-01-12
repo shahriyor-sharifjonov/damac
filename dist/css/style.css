@@ -1838,6 +1838,13 @@ button {
   font-weight: 700;
   color: #37485A;
   font-family: "Montserrat";
+  border-bottom-color: rgba(45, 45, 45, 0.4);
+  border-radius: 0 !important;
+}
+
+.brochure__sm .brochure__form-item-input:focus-visible {
+  border-bottom-color: #2d2d2d;
+  outline: 0;
 }
 
 .brochure__sm .brochure__form-item-input::-webkit-input-placeholder {
@@ -3282,6 +3289,10 @@ button {
 
   .brochure__sm .brochure__form-tag-item::before {
     margin-right: 5px;
+  }
+
+  .brochure__sm .brochure__form-btn {
+    width: 100%;
   }
 
   .brochure__sm-scroll {
