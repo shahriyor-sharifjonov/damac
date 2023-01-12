@@ -3630,6 +3630,14 @@ button {
 }
 
 @media (max-width: 400px) {
+  .brochure__sm .brochure__form-item {
+    padding: 0 12px;
+  }
+
+  .brochure__sm .brochure__form-content {
+    padding: 30px 38px;
+  }
+
   .location {
     height: 600px;
   }
