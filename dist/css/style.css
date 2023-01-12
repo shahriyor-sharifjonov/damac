@@ -1957,6 +1957,7 @@ button {
 }
 
 .interior-mobile {
+  overflow: hidden;
   display: none;
   min-height: 100vh;
   width: 100%;
@@ -1964,7 +1965,7 @@ button {
 }
 
 .interior-mobile__body {
-  padding: 100px 15px 0;
+  padding: 80px 15px 0;
 }
 
 .interior-mobile__title {
@@ -1974,46 +1975,40 @@ button {
   color: white;
   font-size: 32px;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .interior-mobile .swiper {
   width: 100%;
-  overflow: hidden;
+  max-width: 700px;
+  aspect-ratio: 3/2;
+  overflow: visible;
 }
 
-.interior-mobile .swiper-slide {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
+.interior-mobile .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.interior-mobile .swiper-slide > * {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 600ms ease, visibility 600ms ease;
-  -o-transition: opacity 600ms ease, visibility 600ms ease;
-  transition: opacity 600ms ease, visibility 600ms ease;
+.interior-mobile .swiper .swiper-pagination {
+  bottom: -30px;
 }
 
-.interior-mobile .swiper-slide-active {
-  pointer-events: all;
-  z-index: 2;
+.interior-mobile .swiper .swiper-pagination-bullet {
+  background-color: #DCC39E;
+  width: 13px;
+  height: 13px;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
 }
 
-.interior-mobile .swiper-slide-active > * {
-  opacity: 1;
-  visibility: visible;
-}
-
-.interior-mobile .swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.interior-mobile .swiper .swiper-pagination-bullet-active {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .popup {

@@ -104,6 +104,7 @@
     }
 }
 .interior-mobile{
+    overflow: hidden;
     display: none;
     min-height: 100vh;
     width: 100%;
@@ -112,7 +113,7 @@
         display: block;
     }
     &__body{
-        padding: 100px 15px 0;
+        padding: 80px 15px 0;
     }
     &__title{
         width: 100%;
@@ -121,30 +122,31 @@
         color: white;
         font-size: 32px;
         font-weight: 600;
+        margin-bottom: 30px;
     }
     .swiper{
         width: 100%;
-        overflow: hidden;
+        max-width: 700px;
+        aspect-ratio: 3/2;
+        overflow: visible;
         &-slide{
-            user-select: none;
-            pointer-events: none;
-            &>*{
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 600ms ease, visibility 600ms ease;
-            }
-            &-active{
-                pointer-events: all;
-                z-index: 2;
-                &>*{
-                    opacity: 1;
-                    visibility: visible;
-                }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
-        &-wrapper{
-            display: flex;
-            width: max-content;
+        .swiper-pagination{
+            bottom: -30px;
+            &-bullet{
+                background-color: #DCC39E;
+                width: 13px;
+                height: 13px;
+                transition: 300ms ease;
+                &-active{
+                    transform: scale(1.3);
+                }
+            }
         }
     }
 }

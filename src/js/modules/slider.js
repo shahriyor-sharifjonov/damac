@@ -29,9 +29,10 @@ export function init() {
             },
         },
     });
-
+    
     new Swiper('.interior-swiper', {
         modules: [Pagination],
+        spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
         },
