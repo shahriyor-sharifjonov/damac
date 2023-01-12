@@ -9,7 +9,7 @@ import * as cursor from "./modules/cursor.js";
 import * as slider from "./modules/slider.js";
 import * as popup from "./modules/popup.js";
 
-smoothscroll.init();
+// smoothscroll.init();
 functions.isWebp();
 locationmap.init();
 floortabs.init();
