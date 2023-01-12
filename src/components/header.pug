@@ -1,12 +1,44 @@
 mixin header() 
     header.header#header  
         nav.header__nav.container
-            button(type="button").header__button.hover  
+            button(type="button").header__button.hover.btn-toggler  
                 .header__button-lines 
                     span.header__button-line.header__button-line_1 
                     span.header__button-line.header__button-line_2 
                     span.header__button-line.header__button-line_3 
-                span.header__button-text Menu 
+                .header__button-box
+                    span.btn-toggler__tx_close.header__button-text Menu
             a(href="#").header__logo 
                 img(src="@img/logo.svg", alt="" draggable="false") 
             a(href="#!").header__tel.hover +971 56 XXX-XX-XX <span>SHOW</span> 
+            a(href="#!").header__tel-mob.hover 
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63 0.939605C3.76728 1.43237 1.12963 4.45375 0.378027 5.81017C0.199979 6.13146 0.193068 6.16289 0.226948 6.49389C0.340895 7.60535 0.838737 9.20156 1.52599 10.6589C2.28355 12.2655 3.56463 14.1877 5.02254 15.9055C5.76603 16.7816 7.50849 18.5142 8.37414 19.2384C11.5069 21.8588 14.6621 23.4979 17.5056 23.9819C17.7616 24.0255 18.0424 24.0612 18.1297 24.0612C18.4301 24.0612 19.2579 23.5331 20.5075 22.5442C22.1212 21.2672 23.391 20.0202 23.6088 19.4988C23.7829 19.0817 23.4409 18.6885 22.1885 17.866C20.3721 16.673 18.6805 15.7294 17.881 15.4631C17.5068 15.3387 17.4776 15.3362 17.2901 15.4137C17.0375 15.5181 16.8708 15.6773 16.1496 16.5029C15.8251 16.8743 15.4545 17.2791 15.3259 17.4023L15.0922 17.6266L14.7574 17.5408C13.666 17.261 12.1922 16.4972 10.9685 15.5772C10.4272 15.1702 9.51555 14.2947 9.01164 13.6979C8.06183 12.5728 7.16088 10.9483 6.79904 9.70841L6.68086 9.30327L6.96457 9.01502C7.12062 8.85648 7.50749 8.50906 7.8243 8.243C8.55501 7.62935 8.81999 7.35725 8.92084 7.11684C8.99515 6.93971 8.99321 6.89981 8.89508 6.58464C8.60167 5.64218 6.45757 2.06046 5.68276 1.21835C5.25195 0.750103 5.05365 0.697636 4.63 0.939605ZM12.7729 1.62021V2.45135L13.0216 2.45177C14.1122 2.45364 15.5608 2.80272 16.6855 3.33476C18.6066 4.24346 20.058 5.65205 20.9941 7.51616C21.5805 8.68427 21.8299 9.56374 21.9477 10.8797L22.0116 11.594H22.8383H23.6649V11.3657C23.6649 10.9666 23.5629 10.0807 23.4489 9.49013C23.1389 7.88398 22.2759 6.05142 21.2492 4.81939C19.373 2.56797 16.8589 1.19934 13.9872 0.866099C13.6221 0.823711 13.1995 0.789062 13.0481 0.789062H12.7729V1.62021ZM12.7729 5.76104V6.59213L13.1864 6.62637C14.408 6.72745 15.4687 7.2317 16.3599 8.1351C17.2071 8.99393 17.6789 10.009 17.7805 11.1914L17.815 11.594H18.6454H19.4756V11.3798C19.4756 10.6632 19.1543 9.39362 18.7913 8.67608C18.1525 7.41314 17.0187 6.27583 15.7839 5.65922C15.0054 5.2705 14.133 5.03176 13.2496 4.96558L12.7729 4.92989V5.76104Z" fill="#2D3A47"/>
+                </svg>
+
+
+        nav.header__menu
+            .header__menu-container.container
+                ul.header__menu-list
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#about') About
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#amenities') Amenities
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#floor') Floor Plan
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#gallery') Gallery
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#location') Location
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#payment') Payment Plan
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#developer') Developer
+                    li.header__menu-item
+                        a.header__menu-link.hover(href='#invest') Invest
+
+    a(href="#header").header__scroll.hover 
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="23" cy="23" r="22.5" stroke="#DCC39E"/>
+            <path d="M23 32V15M23 15L18 20.1739M23 15L28 20.1739" stroke="#DCC39E"/>
+        </svg> 

@@ -1,8 +1,12 @@
 .interior{
+    display: block;
     background: #2B3845;
     width: 100%;
     overflow-x: clip;
     height: 500vh;
+    @include media(1200){
+        display: none;
+    }
     &__body{
         width: 100%;
         overflow-x: visible;
@@ -95,6 +99,61 @@
                 margin-top: 0;
                 margin-left: 0;
                 margin-bottom: 60px;
+            }
+        }
+    }
+}
+.interior-mobile{
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    background-color: #2B3845;
+    caret-color: transparent;
+    @include media(1200){
+        display: block;
+    }
+    &__body{
+        padding: 80px 15px 0;
+    }
+    &__title{
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 45px;
+    }
+    &__paragraph{
+        font-size: 18px;
+        color: white;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        margin: 30px auto 80px;
+    }
+    .swiper{
+        width: 100%;
+        max-width: 700px;
+        aspect-ratio: 3/2;
+        overflow: visible;
+        padding-bottom: 60px;
+        &-slide{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .swiper-pagination{
+            &-bullet{
+                background-color: #DCC39E;
+                width: 13px;
+                height: 13px;
+                transition: 300ms ease;
+                &-active{
+                    transform: scale(1.3);
+                }
             }
         }
     }
