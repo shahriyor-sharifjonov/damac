@@ -2185,7 +2185,7 @@ button {
 }
 
 .interior-mobile__body {
-  padding: 80px 15px 0;
+  padding: 30px 15px;
 }
 
 .interior-mobile__title {
@@ -2195,7 +2195,7 @@ button {
   color: white;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 .interior-mobile__paragraph {
@@ -2204,7 +2204,7 @@ button {
   max-width: 600px;
   width: 100%;
   text-align: center;
-  margin: 30px auto 80px;
+  margin: 10px auto 0px auto;
 }
 
 .interior-mobile .swiper {
