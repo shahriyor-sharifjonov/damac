@@ -79,13 +79,16 @@
         }
     }
     &__desc{
-        font-weight: 400;
+        font-weight: 100;
         font-size: 30px;
         line-height: 110%;
         text-align: center;
         letter-spacing: 0.01em;
         color: #FFFFFF;
         margin-bottom: 12px;
+        @include media(576){
+            font-size: 24px;
+        }
     }
     &__percent{
         font-weight: 400;
@@ -98,6 +101,9 @@
         }
         @include media(992){
             font-size: 130px;
+        }
+        @include media(576){
+            font-size: 120px;
         }
     }
     &__btn{

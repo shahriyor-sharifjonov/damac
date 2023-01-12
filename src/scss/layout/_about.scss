@@ -93,13 +93,31 @@
         font-size: 60px;
         line-height: 100%;
         color: #FFFFFF;
-        margin-bottom: 28px;
-        position: relative;
+        margin-bottom: 25px;
+        // position: relative;
         width: 100%;
-        height: 60px;
-        overflow: hidden;
+        height: auto;
+        // overflow: hidden;
+        text-align: center;
+        @media (max-width: 1200px) {
+            font-size: 50px;
+        }
+        @media (max-width: 992px) {
+            font-size: 44px;
+        }
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+        @media (max-width: 576px) {
+            font-size: 32px;
+        }
         span{
-            position: absolute;
+            // position: absolute;
+            @include media(1200){
+                text-align: start;
+                white-space: nowrap;
+                
+            }
             @media (max-width: 992px) {
                 width: 100%;
                 text-align: center;
@@ -115,7 +133,7 @@
         max-width: 457px;
         @media (max-width: 992px) {
             text-align: center;
-            margin: 0 auto 50px;
+            margin: 0 auto 40px;
         }
     }
     &__right{
@@ -127,11 +145,11 @@
         width: calc(50% - 100px);
         @include media($xl) {
             width: calc(50% - 30px);
-            gap: 50px 30px;
+            gap: 70px 30px;
         }
         @include media(992){
             width: 80%;
-            gap: 50px 140px;
+            gap: 70px 140px;
         }
         @include media(768){
             flex-direction: column;
@@ -166,6 +184,9 @@
         position: relative; 
         @include media(768){
             font-size: 56px;
+        }
+        @include media(576){
+            margin-bottom: 10px;
         }
         .mr{
             margin-right: 14px;

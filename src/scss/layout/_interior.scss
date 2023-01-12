@@ -138,6 +138,12 @@
         aspect-ratio: 3/2;
         overflow: visible;
         padding-bottom: 60px;
+        @include media(768){
+            aspect-ratio: 4/3;
+        }
+        @include media(576){
+            aspect-ratio: 6/5;
+        }
         &-slide{
             img{
                 width: 100%;
