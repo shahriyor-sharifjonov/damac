@@ -1239,7 +1239,7 @@ button {
   background: #2B3845;
   position: relative;
   overflow: hidden;
-  display: none;
+  width: 100%;
 }
 
 .amenities__body {
@@ -1663,9 +1663,9 @@ button {
 }
 
 .interior {
-  position: relative;
   background: #2B3845;
   width: 100%;
+  overflow-x: clip;
   height: 500vh;
   display: none;
 }
