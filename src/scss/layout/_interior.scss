@@ -106,9 +106,9 @@
 .interior-mobile{
     overflow: hidden;
     display: none;
-    min-height: 100vh;
     width: 100%;
     background-color: #2B3845;
+    caret-color: transparent;
     @include media(1200){
         display: block;
     }
@@ -122,13 +122,22 @@
         color: white;
         font-size: 32px;
         font-weight: 600;
-        margin-bottom: 30px;
+        margin-bottom: 45px;
+    }
+    &__paragraph{
+        font-size: 18px;
+        color: white;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        margin: 30px auto 80px;
     }
     .swiper{
         width: 100%;
         max-width: 700px;
         aspect-ratio: 3/2;
         overflow: visible;
+        padding-bottom: 60px;
         &-slide{
             img{
                 width: 100%;
@@ -137,7 +146,6 @@
             }
         }
         .swiper-pagination{
-            bottom: -30px;
             &-bullet{
                 background-color: #DCC39E;
                 width: 13px;
