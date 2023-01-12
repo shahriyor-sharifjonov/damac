@@ -1,8 +1,8 @@
-import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
+import Swiper, { Thumbs } from "swiper";
 
 export function init() {
     const galleryThumbs = new Swiper('.amenities__cbot', {
-        spaceBetween: 12,
+        spaceBetween: 15,
         slidesPerView: 3,
         observer: true,
         observeParents: true,
@@ -13,7 +13,7 @@ export function init() {
     });
     const galleryTop = new Swiper('.amenities__ctop', {
         modules: [Thumbs],
-        spaceBetween: 12,
+        spaceBetween: 15,
         // loop: true,
         grabCursor: true,
         autoHeight: true,
