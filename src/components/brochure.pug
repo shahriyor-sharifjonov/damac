@@ -39,7 +39,7 @@ mixin brochure()
                 .brochure__form-tag 
                     .brochure__form-tag-item Lifestyle
                     .brochure__form-tag-item Gallery
-                    .brochure__form-tag-item Prices
+                    .brochure__form-tag-item Floor plans
                     .brochure__form-tag-item Masterplan
 
         .brochure__sm-scroll
@@ -48,11 +48,11 @@ mixin brochure()
 
         form(action="https://form.sales-inquiries.ae/logger/form_receiver/" data-gtag-submit="modal" method="post").brochure__form-content 
             .brochure__form-item 
-                input(type="text" name='name' placeholder="Enter your name").brochure__form-item-input  
+                input(type="text" name='name' placeholder="Your name").brochure__form-item-input  
             .brochure__form-item 
-                input(type='email' name='email' placeholder="Enter your e-mail").brochure__form-item-input  
+                input(type='email' name='email' placeholder="Your e-mail").brochure__form-item-input  
             .brochure__form-item 
-                input(type='tel' name='phone' placeholder="Enter phone number").brochure__form-item-input
+                input(type='tel' name='phone' placeholder="Phone number").brochure__form-item-input
             input(type="hidden" name="project" value="damac")
             input(type="hidden" name="description" value="page_form")
             input(type="hidden" name="duration" value="").duration
