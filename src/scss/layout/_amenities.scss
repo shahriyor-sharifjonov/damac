@@ -4,11 +4,20 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    &__sm{
+        display: none;
+        @include media(1200){
+            display: block;
+        }
+    }
     &__body{
         position: relative;
         width: 100%;
         overflow-x: visible;
         overflow-y: hidden;
+        @include media(1200){
+            display: none;
+        }
     }
     &__wrapper{
         display: flex;
