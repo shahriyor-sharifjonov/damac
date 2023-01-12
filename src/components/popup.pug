@@ -40,14 +40,20 @@ mixin popup()
                             span Floor plans
             form(action="#" method="post").popup__form
                 .popup__input
-                    input(type="text" placeholder="Your name")
+                    input(type="text" name='name' placeholder="Your name" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type="text" placeholder="Your email")
+                    input(type='email' name='email' placeholder="Your email" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type="text" placeholder="Your number")
+                    input(type='tel' name='phone' placeholder="Your number" required)
                     .popup__input-hr 
+                input(type="hidden" name="project" value="damac")
+                input(type="hidden" name="description" value="page_form")
+                input(type="hidden" name="duration" value="").duration
+                input(type="hidden" name="pasted_fields" value="").pasted_fields
+                input(type="hidden" name="language" value="english")
+                input(type="hidden" name="current_page" value="")
                 button(type="submit").popup__button.hover Download 
     .popup.floorplan-popup#floorPopup  
         .popup__overlay.popup-close 
