@@ -1,8 +1,12 @@
 .interior{
+    display: block;
     background: #2B3845;
     width: 100%;
     overflow-x: clip;
     height: 500vh;
+    @include media(1200){
+        display: none;
+    }
     &__body{
         width: 100%;
         overflow-x: visible;
@@ -96,6 +100,51 @@
                 margin-left: 0;
                 margin-bottom: 60px;
             }
+        }
+    }
+}
+.interior-mobile{
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #2B3845;
+    @include media(1200){
+        display: block;
+    }
+    &__body{
+        padding: 100px 15px 0;
+    }
+    &__title{
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .swiper{
+        width: 100%;
+        overflow: hidden;
+        &-slide{
+            user-select: none;
+            pointer-events: none;
+            &>*{
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 600ms ease, visibility 600ms ease;
+            }
+            &-active{
+                pointer-events: all;
+                z-index: 2;
+                &>*{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        &-wrapper{
+            display: flex;
+            width: max-content;
         }
     }
 }

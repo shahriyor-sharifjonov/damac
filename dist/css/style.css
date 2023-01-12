@@ -1696,6 +1696,7 @@ button {
 }
 
 .interior {
+  display: block;
   background: #2B3845;
   width: 100%;
   overflow-x: clip;
@@ -1846,6 +1847,66 @@ button {
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 60px;
+}
+
+.interior-mobile {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #2B3845;
+}
+
+.interior-mobile__body {
+  padding: 100px 15px 0;
+}
+
+.interior-mobile__title {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.interior-mobile .swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.interior-mobile .swiper-slide {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.interior-mobile .swiper-slide > * {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms ease, visibility 600ms ease;
+  -o-transition: opacity 600ms ease, visibility 600ms ease;
+  transition: opacity 600ms ease, visibility 600ms ease;
+}
+
+.interior-mobile .swiper-slide-active {
+  pointer-events: all;
+  z-index: 2;
+}
+
+.interior-mobile .swiper-slide-active > * {
+  opacity: 1;
+  visibility: visible;
+}
+
+.interior-mobile .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .popup {
@@ -2244,6 +2305,14 @@ button {
   .location__img img {
     -o-object-position: -100px;
        object-position: -100px;
+  }
+
+  .interior {
+    display: none;
+  }
+
+  .interior-mobile {
+    display: block;
   }
 }
 

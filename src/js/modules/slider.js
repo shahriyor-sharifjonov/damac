@@ -29,4 +29,12 @@ export function init() {
             },
         },
     });
+
+    new Swiper('.interior-swiper', {
+        modules: [Pagination],
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 }
+
