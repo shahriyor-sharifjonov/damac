@@ -1804,12 +1804,28 @@ button {
 }
 
 .brochure__sm .brochure__form-content {
-  -webkit-filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
-          filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
-  width: 80%;
   margin: 0 auto;
   border-radius: 0;
   margin-bottom: 48px;
+  position: relative;
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 100%;
+  padding: 30px 100px;
+  margin: 0;
+}
+
+.brochure__sm .brochure__form-content::before {
+  content: "";
+  background: #FFFFFF;
+  -webkit-filter: blur(5.5px);
+          filter: blur(5.5px);
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -25px;
+  height: 40px;
 }
 
 .brochure__sm .brochure__form-item {
@@ -1819,6 +1835,7 @@ button {
 .brochure__sm .brochure__form-item-input {
   font-weight: 700;
   color: #37485A;
+  font-family: "Montserrat";
 }
 
 .brochure__sm .brochure__form-item-input::-webkit-input-placeholder {
@@ -3112,6 +3129,13 @@ button {
     margin-bottom: 20px;
   }
 
+  .brochure__sm .brochure__form-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 60px;
+    margin: 0;
+  }
+
   .location__acc {
     padding: 23px 26px;
   }
@@ -3289,11 +3313,6 @@ button {
   .brochure__sm .brochure__form-item-input::placeholder {
     font-size: 12px;
     line-height: 176%;
-  }
-
-  .brochure__sm .brochure__form-content {
-    width: 100%;
-    max-width: 300px;
   }
 
   .brochure__sm .btn_2 {

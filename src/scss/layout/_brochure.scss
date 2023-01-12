@@ -215,12 +215,30 @@
 
 
         .brochure__form-content {
-            filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
-            width: 80%;
+            // filter: drop-shadow(0px 4px 40px rgba(55, 72, 90, 0.35));
             margin: 0 auto;
             border-radius: 0;
             margin-bottom: 48px;
+            position: relative;
+            background: #FFFFFF;
+            width: 100%;
+            max-width: 100%;
+            padding: 30px 100px;
+            margin: 0;
+
+            &::before {
+                content: "";
+                background: #FFFFFF;
+                filter: blur(5.5px);
+                width: 100%;
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: -25px;
+                height: 40px;
+            }
         }
+
 
         .brochure__form-item {
             padding-top: 16px;
@@ -229,6 +247,7 @@
         .brochure__form-item-input {
             font-weight: 700;
             color: #37485A;
+            font-family: 'Montserrat';
 
             &::placeholder {
                 font-family: 'Montserrat';
@@ -253,6 +272,17 @@
         @media(max-width: 1200px) {
             display: block;
         }
+
+        @media(max-width: 768px) {
+            .brochure__form-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 30px 60px;
+                margin: 0;
+            }
+
+        }
+
 
         @media(max-width: 576px) {
             &-title {
@@ -282,6 +312,7 @@
             }
 
             .brochure__form-item-input {
+
                 &,
                 &::placeholder {
                     font-size: 12px;
@@ -289,10 +320,6 @@
                 }
             }
 
-            .brochure__form-content {
-                width: 100%;
-                max-width: 300px;
-            }
 
             .btn_2 {
                 font-size: 12.5px;
