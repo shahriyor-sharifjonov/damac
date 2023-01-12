@@ -133,6 +133,10 @@
         }
     }
     &__img{
+        width: 150px;
+        img{
+            width: 150px;
+        }
         @include media(992){
             width: 100px;
             min-width: 100px;
