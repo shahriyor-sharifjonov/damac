@@ -19,6 +19,13 @@
         visibility: visible;
         pointer-events: all;
     }
+    &.floorplan-popup{
+        .popup{
+            &__body{
+                
+            }
+        }
+    }
     &__body{
         position: relative;
         display: flex;

@@ -12,6 +12,10 @@ function close() {
 export function init() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
+            if(button.classList.contains('take-content')){
+                const price = button.parentElement.querySelector('.price').innerHTML;
+                const image = button.parentElement.parentElement.querySelector('.floor__item-img img').getAttribute('src');
+            }
             const target = button.getAttribute('data-popup');
             const popup = document.querySelector(target);
             popup.classList.add('active');
@@ -20,24 +24,24 @@ export function init() {
     });
 
     popups.forEach(popup => {
-        const bg = popup.querySelector('.popup__bg');
-        if(bg.classList.contains('multiple')){
-            console.log('multiple detected');
-            function loop(){
-                console.log('starting loop function');
-                const img = popup.querySelector('.popup__bg-img.active');
-                const firstImg = popup.querySelector('.popup__bg-img.first');
-                setTimeout(() => {
-                    img.classList.remove('active');
-                    if(!img.classList.contains('last')){
-                        img.nextElementSibling.classList.add('active');
-                    }else{
-                        firstImg.classList.add('active');
-                    }
-                    loop()
-                }, 2000);
+        if(popup.querySelector('.popup__bg')){
+            const bg = popup.querySelector('.popup__bg');
+            if(bg.classList.contains('multiple')){
+                function loop(){
+                    const img = popup.querySelector('.popup__bg-img.active');
+                    const firstImg = popup.querySelector('.popup__bg-img.first');
+                    setTimeout(() => {
+                        img.classList.remove('active');
+                        if(!img.classList.contains('last')){
+                            img.nextElementSibling.classList.add('active');
+                        }else{
+                            firstImg.classList.add('active');
+                        }
+                        loop()
+                    }, 2000);
+                }
+                loop();
             }
-            loop();
         }
     })
 

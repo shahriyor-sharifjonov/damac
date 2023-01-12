@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230112111943"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230112121748"/>
     <title>Damac </title>
   </head>
   <body> 
@@ -103,15 +103,15 @@
               </div>
               <div class="swiper-wrapper"> 
                 <div class="floor__item swiper-slide"> 
-                  <div class="floor__item-img"> <picture><source srcset="img/floor_1-1.webp" type="image/webp"><img src="img/floor_1-1.png" alt="" draggable="false" data-kg="" data-kg-group="floorplans"/></picture></div>
+                  <div class="floor__item-img"> <picture><source srcset="img/floor_1-1.webp" type="image/webp"><img src="img/floor_1-1.png" alt="" draggable="false"/></picture></div>
                   <div class="floor__item-info"> 
                     <div class="floor__item-title">Type 1</div>
                     <div class="floor__item-info-row"> 
                       <p class="floor__item-info-p">Bathroom  <span>1</span></p>
                       <p class="floor__item-info-p">Total area  <span>818 sq. ft.</span></p>
-                      <p class="floor__item-info-p">Price from  <span>1 322 000 AED</span></p>
+                      <p class="floor__item-info-p">Price from  <span class="price">1 322 000 AED</span></p>
                     </div>
-                    <button class="open-popup floor__item-btn btn_2 hover" type="button" anim="ripple" data-target="#popup1">Download broshure</button>
+                    <button class="take-content floor__item-btn btn_2 hover" type="button" anim="ripple" data-popup="#floorPopup">Download broshure</button>
                     <p class="floor__item-label">Prices, floor plans & availabilities</p>
                   </div>
                 </div>
@@ -134,15 +134,15 @@
               </div>
               <div class="swiper-wrapper"> 
                 <div class="floor__item swiper-slide"> 
-                  <div class="floor__item-img"> <picture><source srcset="img/floor_2-1.webp" type="image/webp"><img src="img/floor_2-1.png" alt="" draggable="false" data-kg="" data-kg-group="floorplans"/></picture></div>
+                  <div class="floor__item-img"> <picture><source srcset="img/floor_2-1.webp" type="image/webp"><img src="img/floor_2-1.png" alt="" draggable="false"/></picture></div>
                   <div class="floor__item-info"> 
                     <div class="floor__item-title">Type 1</div>
                     <div class="floor__item-info-row">
                       <p class="floor__item-info-p">Bathroom  <span>3</span></p>
                       <p class="floor__item-info-p">Total area  <span>1 193 sq. ft.</span></p>
-                      <p class="floor__item-info-p">Price from  <span>2 211 000 AED</span></p>
+                      <p class="floor__item-info-p">Price from  <span class="price">2 211 000 AED</span></p>
                     </div>
-                    <button class="open-popup floor__item-btn btn_2 hover" type="button" anim="ripple" data-target="#popup1">Download broshure</button>
+                    <button class="take-content floor__item-btn btn_2 hover" type="button" anim="ripple" data-popup="#floorPopup">Download broshure</button>
                     <p class="floor__item-label">Prices, floor plans & availabilities </p>
                   </div>
                 </div>
@@ -165,15 +165,15 @@
               </div>
               <div class="swiper-wrapper"> 
                 <div class="floor__item swiper-slide"> 
-                  <div class="floor__item-img"> <picture><source srcset="img/floor_3-1.webp" type="image/webp"><img src="img/floor_3-1.png" alt="" draggable="false" data-kg="" data-kg-group="floorplans"/></picture></div>
+                  <div class="floor__item-img"> <picture><source srcset="img/floor_3-1.webp" type="image/webp"><img src="img/floor_3-1.png" alt="" draggable="false"/></picture></div>
                   <div class="floor__item-info"> 
                     <div class="floor__item-title">Type 1</div>
                     <div class="floor__item-info-row">
                       <p class="floor__item-info-p">Bathroom  <span>4</span></p>
                       <p class="floor__item-info-p">Total area  <span>1 700 sq. ft.</span></p>
-                      <p class="floor__item-info-p">Price from  <span>2 336 000 AED</span></p>
+                      <p class="floor__item-info-p">Price from  <span class="price">2 336 000 AED</span></p>
                     </div>
-                    <button class="open-popup floor__item-btn btn_2 hover" type="button" anim="ripple" data-target="#popup1">Download broshure</button>
+                    <button class="take-content floor__item-btn btn_2 hover" type="button" anim="ripple" data-popup="#floorPopup">Download broshure</button>
                     <p class="floor__item-label">Prices, floor plans & availabilities</p>
                   </div>
                 </div>
@@ -396,6 +396,16 @@
         </form>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20230112111943"> </script>
+    <div class="popup floorplan-popup active" id="floorPopup"> 
+      <div class="popup__overlay popup-close"> </div>
+      <div class="popup__body">
+        <button class="popup-close popup__close hover" type="button">
+           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
+        </button>
+      </div>
+    </div>
+    <script src="js/app.min.js?_v=20230112121748"> </script>
   </body>
 </html>
