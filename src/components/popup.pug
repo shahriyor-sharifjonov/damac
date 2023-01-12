@@ -8,11 +8,11 @@ mixin popup()
                 </svg>
             .popup__bg.multiple
                 .popup__bg-img.first.active
-                    img(src="@img/popup-1.png", alt="" draggable="false")
+                    img(src="@img/popup-1.png" alt="" draggable="false")
                 .popup__bg-img 
-                    img(src="@img/popup-2.png", alt="" draggable="false")
+                    img(src="@img/popup-2.png" alt="" draggable="false")
                 .popup__bg-img.last 
-                    img(src="@img/popup-3.png", alt="" draggable="false")
+                    img(src="@img/popup-3.png" alt="" draggable="false")
             .popup__content
                 p.popup__title <span>Get information</span> on availabilities
                 p.popup__p that includes :
@@ -56,4 +56,35 @@ mixin popup()
                 <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg> 
-            
+
+    .popup.handover-popup#handover-popup
+        .popup__body
+            button(type="button").popup-close.popup__close.hover 
+                <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            .popup__body-rows
+                .popup__body-col 
+                    .popup__body-item 5% Within 3 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 6 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 9 Month(s) Of Sale Date
+                    .popup__body-item 5% Within 12 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 15 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 18 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 21 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 24 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 27 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 30 Month(s) Of Sale Date
+                .popup__body-col 
+                    .popup__body-item 3% Within 33 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 36 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 39 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 42 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 45 Month(s) Of Sale Date
+                    .popup__body-item 3% Within 48 Month(s) Of Sale Date
+                    .popup__body-item 2% On 70% Completion Milestone
+                    .popup__body-item 1% On 80% Completion Milestone
+                    .popup__body-item 1% On 90% Completion Milestone
+                    .popup__body-item 20% On Completion
+        .popup__overlay.popup-close Back
+
