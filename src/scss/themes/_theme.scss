@@ -47,6 +47,32 @@ button{
     border: none;
     cursor: pointer;
 }
+.showmore{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 177%;
+    text-decoration-line: underline;
+    color: #E5965F;
+    &.sm{
+        display: none;
+        @include media(575){
+            display: block;
+        }
+    }
+    &-text{
+        @include media(576){
+            overflow: hidden;
+            width:100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            &.more{
+                display: block;
+            }
+        }
+    }
+}
 .btn{
     background: #FFFFFF;
     padding: 15px 20px;

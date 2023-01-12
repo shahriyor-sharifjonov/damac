@@ -160,7 +160,6 @@
             justify-content: center;
             @include media(768){
                 padding: 6px 14px;
-                border-radius: 9px;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 15px;
@@ -226,9 +225,11 @@
                 }
                 @include media(768){
                     margin-bottom: 20px;
+                    width: 100%;
                 }
             }
             &-p{
+                width: 100%;
                 font-weight: 500;
                 font-size: 22px;
                 line-height: 120%;
@@ -236,13 +237,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                gap: 8px;
                 &:not(:last-of-type){
                     padding-bottom: 15px;
                     border-bottom: 1px solid rgba(#2B3845, 0.1);
                 }
                 @include media(992){
                     font-weight: 500;
-                    font-size: 14px;
+                    font-size: 20px;
                     line-height: 100%;
                 }
                 span{
@@ -257,9 +259,10 @@
             line-height: 100%;
             color: rgba(0, 0, 0, 0.6);
             text-align: center;
+            margin-top: 10px;
             @include media(992){
                 font-weight: 500;
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 100%;
             }
         }
