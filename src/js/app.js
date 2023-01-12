@@ -8,7 +8,11 @@ import * as counter from "./modules/counter.js";
 import * as cursor from "./modules/cursor.js";
 import * as slider from "./modules/slider.js";
 import * as popup from "./modules/popup.js";
+<<<<<<< HEAD
 import * as header from "./modules/header.js";
+=======
+import * as amenities from "./modules/amenities.js";
+>>>>>>> refs/remotes/origin/main
 
 // smoothscroll.init();
 functions.isWebp();
@@ -20,4 +24,8 @@ counter.init();
 cursor.init();
 slider.init();
 popup.init();
+<<<<<<< HEAD
 header.init();
+=======
+amenities.init();
+>>>>>>> refs/remotes/origin/main
