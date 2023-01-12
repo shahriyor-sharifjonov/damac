@@ -3160,6 +3160,14 @@ button {
     background: #EBDDC8;
   }
 
+  .popup.handover-popup .popup__body-col:first-child {
+    padding-top: 20px;
+  }
+
+  .popup.handover-popup .popup__body-col:last-child {
+    padding-bottom: 20px;
+  }
+
   .popup.handover-popup .popup__body-item {
     padding: 4px 20px;
   }
