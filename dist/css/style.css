@@ -1876,6 +1876,10 @@ button {
   pointer-events: all;
 }
 
+.popup.floorplan-popup .popup__body {
+  padding: 0;
+}
+
 .popup__body {
   position: relative;
   display: -webkit-box;
