@@ -1997,6 +1997,32 @@ button {
   margin-bottom: 45px;
 }
 
+.location__acc .accordion__item.nosvg {
+  position: relative;
+}
+
+.location__acc .accordion__item.nosvg .accordion__item-svg {
+  position: relative;
+}
+
+.location__acc .accordion__item.nosvg .accordion__item-svg .circ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+  opacity: 0;
+  background: #fff;
+  border-radius: 50%;
+  visibility: hidden;
+  height: 70%;
+}
+
 .location__acc .accordion__item.active .accordion__item-svg {
   background: #fff;
 }
@@ -2007,6 +2033,15 @@ button {
   stroke-opacity: 1;
   opacity: 1;
   fill-opacity: 1;
+}
+
+.location__acc .accordion__item.active.nosvg .accordion__item-svg {
+  background: transparent;
+}
+
+.location__acc .accordion__item.active.nosvg .accordion__item-svg .circ {
+  opacity: 1;
+  visibility: visible;
 }
 
 .location__acc .accordion__item-svg {

@@ -63,6 +63,25 @@
                 &:not(:last-of-type){
                     margin-bottom: 45px;
                 }
+                &.nosvg{
+                    position: relative;
+                    .accordion__item-svg{
+                        position: relative;
+                        .circ{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%;
+                            transition: 300ms ease;
+                            opacity: 0;
+                            background: #fff;
+                            border-radius: 50%;
+                            visibility: hidden;
+                            height: 70%;
+                        }
+                    }
+                }
                 &.active{
                     .accordion__item-svg{
                         background: #fff;
@@ -72,6 +91,15 @@
                             stroke-opacity: 1;
                             opacity: 1;
                             fill-opacity: 1;
+                        }
+                    }
+                    &.nosvg{
+                        .accordion__item-svg{
+                            background: transparent;
+                            .circ{
+                                opacity: 1;
+                                visibility: visible;
+                            }
                         }
                     }
                 }
