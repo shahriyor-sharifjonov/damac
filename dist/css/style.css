@@ -1279,6 +1279,15 @@ button {
   overflow-y: hidden;
 }
 
+.amenities__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  color: #DCC39E;
+  margin-bottom: 30px;
+}
+
 .amenities__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1353,6 +1362,8 @@ button {
 }
 
 .amenities__carousel {
+  width: 100%;
+  overflow: hidden;
   display: none;
 }
 
@@ -1375,7 +1386,6 @@ button {
 
 .amenities__carousel-item {
   line-height: 0;
-  border-radius: 12px;
   overflow: hidden;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -1460,7 +1470,6 @@ button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 12px;
 }
 
 .brochure {
@@ -2517,6 +2526,10 @@ button {
   .floor__item-btn {
     max-width: 300px;
     width: 100%;
+  }
+
+  .amenities {
+    padding: 30px 0;
   }
 
   .amenities__body {
