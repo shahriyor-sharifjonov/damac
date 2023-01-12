@@ -19,7 +19,22 @@ body{
 body{
     width: 100%;
     overflow-x: hidden;
+	position: relative;
+	overflow: hidden;
 }
+
+.body-overlay{
+	width: 100vw;
+	height: 100vh;
+	visibility: hidden;
+	position: fixed;
+	z-index: 3;
+	opacity: 0;
+	top: 0;
+	overflow: hidden;
+	background: rgba(0,0,0,.4);
+}
+
 .wrapper{
     min-height: 100%;
     display: flex;
