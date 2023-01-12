@@ -15,13 +15,19 @@ mixin brochure()
                             .brochure__form-tag-item Gallery
                             .brochure__form-tag-item Floor
                             .brochure__form-tag-item Plans
-                        form(action="#" method="post").brochure__form-content 
+                        form(action="https://form.sales-inquiries.ae/logger/form_receiver/" data-gtag-submit="modal" method="post").brochure__form-content 
                             .brochure__form-item 
-                                input(type="text" placeholder="Your name").brochure__form-item-input  
+                                input(type="text" name='name' placeholder="Your name" required).brochure__form-item-input  
                             .brochure__form-item 
-                                input(type="text" placeholder="Your e-mail").brochure__form-item-input  
+                                input(type='email' name='email' placeholder="Your e-mail" required).brochure__form-item-input  
                             .brochure__form-item 
-                                input(type="text" placeholder="Phone number").brochure__form-item-input  
+                                input(type='tel' name='phone' placeholder="Phone number" required).brochure__form-item-input  
+                            input(type="hidden" name="project" value="damac")
+                            input(type="hidden" name="description" value="page_form")
+                            input(type="hidden" name="duration" value="").duration
+                            input(type="hidden" name="pasted_fields" value="").pasted_fields
+                            input(type="hidden" name="language" value="english")
+                            input(type="hidden" name="current_page" value="")
                             button(type="submit").brochure__form-btn.btn_2 DOWNLOAD 
                                 //- <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 //-     <path d="M6 15L6 -2.62268e-07M6 15C6 11.7208 8.68629 9.0625 12 9.0625M6 15C6 11.7208 3.31371 9.0625 3.19121e-07 9.0625" stroke="#FBFAF4" stroke-width="2"/>
@@ -40,13 +46,19 @@ mixin brochure()
             img(src="@img/brochure-scroll.png", alt="" draggable="false")
             img(src="@img/brochure-scroll.png", alt="" draggable="false")
 
-        form(action="#" method="post").brochure__form-content 
+        form(action="https://form.sales-inquiries.ae/logger/form_receiver/" data-gtag-submit="modal" method="post").brochure__form-content 
             .brochure__form-item 
-                input(type="text" placeholder="Enter your name").brochure__form-item-input  
+                input(type="text" name='name' placeholder="Enter your name").brochure__form-item-input  
             .brochure__form-item 
-                input(type="text" placeholder="Enter your e-mail").brochure__form-item-input  
+                input(type='email' name='email' placeholder="Enter your e-mail").brochure__form-item-input  
             .brochure__form-item 
-                input(type="text" placeholder="Enter phone number").brochure__form-item-input  
+                input(type='tel' name='phone' placeholder="Enter phone number").brochure__form-item-input
+            input(type="hidden" name="project" value="damac")
+            input(type="hidden" name="description" value="page_form")
+            input(type="hidden" name="duration" value="").duration
+            input(type="hidden" name="pasted_fields" value="").pasted_fields
+            input(type="hidden" name="language" value="english")
+            input(type="hidden" name="current_page" value="")  
             button(type="submit").brochure__form-btn.btn_2 DOWNLOAD BROCHURE 
 
 
