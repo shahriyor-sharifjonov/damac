@@ -1754,6 +1754,8 @@ button {
 
 .brochure__sm .brochure__form-tag-item::before {
   opacity: 1;
+  width: 3px;
+  height: 3px;
 }
 
 .brochure__sm .brochure__form-tag {
@@ -4101,6 +4103,10 @@ button {
 
   .brochure__sm .brochure__form-item {
     padding-top: 0;
+  }
+
+  .brochure__sm .brochure__form-tag-item {
+    font-size: 12px;
   }
 
   .brochure__sm .brochure__form-tag-item {
