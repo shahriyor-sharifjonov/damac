@@ -1042,6 +1042,7 @@ button {
   margin-right: 10px;
   font-weight: 600;
   font-size: 14px;
+  color: black;
 }
 
 .floor {
@@ -3905,7 +3906,7 @@ button {
   }
 
   .floor__item-info-row {
-    margin-bottom: 20px;
+    margin-bottom: 46px;
     width: 100%;
   }
 
