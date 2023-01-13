@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230113123855"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230113123855"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230113132231"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230113132231"/>
     <title>Damac </title>
   </head>
   <body> 
@@ -56,7 +56,8 @@
         <div class="about__body container"> 
           <div class="about__left"> 
             <h2 class="about__title"> <span>SKY HIGH LUXURY</span></h2>
-            <p class="about__desc">Harbour Lights is a luxurious residential building located in the heart of Dubai Maritime City, offering spacious and stylish apartments, panoramic views, and a unique floating pool.</p><a class="about__btn btn" href="#!"> Learn More</a>
+            <p class="about__desc">Harbour Lights is a luxurious residential building located in the heart of Dubai Maritime City, offering spacious and stylish apartments, panoramic views, and a unique floating pool.</p>
+            <button class="about__btn btn" data-popup="#brochure-popup"> Learn more</button>
           </div>
           <div class="about__right"> 
             <div class="about__col"> 
@@ -517,7 +518,7 @@
         </form>
       </div>
     </div>
-    <div class="floor-plan popup" id="floorPopup">
+    <div class="floor-plan popup" id="floorPopup"> 
       <div class="blur popup-close"> </div>
       <div class="floor-plan__modal"> 
         <div class="floor-plan__modal-back popup-close">
@@ -603,22 +604,42 @@
 <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
         </button>
-        <div class="popup__bg multiple">
-          <div class="popup__bg-img first active"><picture><source srcset="img/popup-1.webp" type="image/webp"><img src="img/popup-1.png" alt="" draggable="false"/></picture></div>
-          <div class="popup__bg-img"> <picture><source srcset="img/popup-2.webp" type="image/webp"><img src="img/popup-2.png" alt="" draggable="false"/></picture></div>
-          <div class="popup__bg-img last"> <picture><source srcset="img/popup-3.webp" type="image/webp"><img src="img/popup-3.png" alt="" draggable="false"/></picture></div>
-        </div>
-        <div class="popup__body-head">
-          <div class="popup__title"><span>Download</span> brochure in one click</div>
-          <div class="popup__tag-ul">
-            <div class="popup__tag-li">Masterplan</div>
-            <div class="popup__tag-li">Gallery</div>
-            <div class="popup__tag-li">Lifestyle</div>
-            <div class="popup__tag-li">Floor plans</div>
+        <div class="popup__brochure-bg"><picture><source srcset="img/bg-brochure-popup.webp" type="image/webp"><img src="img/bg-brochure-popup.png" alt="" draggable="false"/></picture></div>
+        <div class="popup__inner-wrap">
+          <div class="popup__body-head">
+            <div class="popup__title"><span>Download</span> brochure in one click</div>
+            <div class="popup__tag-ul">
+              <div class="popup__tag-li">Masterplan</div>
+              <div class="popup__tag-li">Gallery</div>
+              <div class="popup__tag-li">Lifestyle</div>
+              <div class="popup__tag-li">Floor plans</div>
+            </div>
           </div>
+          <form class="popup__form popup__form-2" action="#" method="post">
+            <div class="popup__input">
+              <input type="text" name="name" placeholder="Your name" required="required"/>
+              <div class="popup__input-hr"> </div>
+            </div>
+            <div class="popup__input">
+              <input type="email" name="email" placeholder="Your email" required="required"/>
+              <div class="popup__input-hr"> </div>
+            </div>
+            <div class="popup__input">
+              <input type="tel" name="phone" placeholder="Your number" required="required"/>
+              <div class="popup__input-hr"> </div>
+            </div>
+            <input type="hidden" name="project" value="damac"/>
+            <input type="hidden" name="description" value="page_form"/>
+            <input class="duration" type="hidden" name="duration" value=""/>
+            <input class="pasted_fields" type="hidden" name="pasted_fields" value=""/>
+            <input type="hidden" name="language" value="english"/>
+            <input type="hidden" name="current_page" value=""/>
+            <button class="popup__button hover" type="submit">Download </button>
+          </form>
+          <div class="popup__image"><picture><source srcset="img/popup-brochure.webp" type="image/webp"><img src="img/popup-brochure.png" alt=""/></picture></div>
         </div>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20230113123855"> </script>
+    <script src="js/app.min.js?_v=20230113132231"> </script>
   </body>
 </html>

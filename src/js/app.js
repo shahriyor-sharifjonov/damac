@@ -11,7 +11,7 @@ import * as popup from "./modules/popup.js";
 import * as header from "./modules/header.js";
 import * as amenities from "./modules/amenities.js";
 import * as floorpopup from "./modules/floorpopup.js";
-
+ 
 // smoothscroll.init();
 functions.isWebp();
 locationmap.init();
