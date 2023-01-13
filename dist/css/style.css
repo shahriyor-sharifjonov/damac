@@ -3364,12 +3364,12 @@ button {
 
   .intro::before {
     bottom: auto;
-    top: -200px;
-    height: 1150px;
+    top: 0;
+    height: 100%;
     width: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(61.35%, #2B3845));
-    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
-    background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-5.79%, rgba(43, 56, 69, 0)), color-stop(95.64%, #2B3845));
+    background: -o-linear-gradient(top, rgba(43, 56, 69, 0) -5.79%, #2B3845 95.64%);
+    background: linear-gradient(180deg, rgba(43, 56, 69, 0) -5.79%, #2B3845 95.64%);
   }
 
   .intro__title {
@@ -4348,17 +4348,9 @@ button {
     display: block;
   }
 
-  .intro {
-    min-height: 400px;
-  }
-
-  .intro::before {
-    height: 800px;
-  }
-
   .intro__background img {
-    -o-object-position: 100px;
-       object-position: 100px;
+    -o-object-position: 160px;
+       object-position: 160px;
   }
 
   .floor__item-title {
