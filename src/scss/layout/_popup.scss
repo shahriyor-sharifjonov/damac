@@ -304,7 +304,6 @@
         &__tag-item {
             width: 100%;
         }
-
     }
 }
 
@@ -532,7 +531,7 @@
         }
     }
 
-    .popup__overlay {
+    .popup__close-2 {
         background: #2B3845;
         color: #fff;
         font-family: 'Montserrat';
@@ -547,6 +546,7 @@
         cursor: pointer;
         text-align: center;
         display: none;
+        position: relative;
     }
 
     @media(max-width: 768px) {
@@ -607,9 +607,63 @@
             display: none;
         }
 
-        .popup__overlay {
+        .popup__close-2 {
             display: block;
         }
 
+    }
+}
+
+.brochure-popup {
+    .popup__body {
+        max-width: 971px;
+        width: 100%;
+        padding: 80px;
+
+        &-head {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .popup__title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        max-width: 303px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .popup__tag-ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 28px;
+    }
+
+    .popup__tag-li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 96.5%;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        &::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            display: block;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+        }
     }
 }

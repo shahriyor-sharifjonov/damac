@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230113113306"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230113113306"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230113115830"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230113115830"/>
     <title>Damac </title>
   </head>
   <body> 
@@ -291,7 +291,7 @@
               <div class="accordion__item-svg"><svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.6134 12.3735V11.8735H16.1134H15.1071C14.2589 11.8735 13.5944 11.207 13.5944 10.4327V4.61018C13.5944 4.0627 13.9087 3.37582 14.5285 2.74249C15.139 2.11866 16.0013 1.59577 16.9916 1.36107C17.335 1.28312 17.6262 1.53941 17.6262 1.82509V19.1664C17.6262 19.407 17.4144 19.6368 17.1198 19.6368C16.8251 19.6368 16.6134 19.407 16.6134 19.1664V12.3735ZM8.06258 8.02143H8.56258V7.52143V1.69893C8.56258 1.45833 8.77429 1.22852 9.06893 1.22852C9.36358 1.22852 9.57529 1.45833 9.57529 1.69893V7.52143C9.57529 9.37292 8.01507 10.9031 6.04986 10.9031H5.54986V11.4031V19.1664C5.54986 19.407 5.33815 19.6368 5.04351 19.6368C4.74886 19.6368 4.53715 19.407 4.53715 19.1664V11.4031V10.9031H4.03715C2.07195 10.9031 0.511719 9.37292 0.511719 7.52143V1.69893C0.511719 1.45833 0.723427 1.22852 1.01808 1.22852C1.31273 1.22852 1.52443 1.45833 1.52443 1.69893V7.52143V8.02143H2.02443H4.03715H4.53715V7.52143V1.69893C4.53715 1.45833 4.74886 1.22852 5.04351 1.22852C5.33815 1.22852 5.54986 1.45833 5.54986 1.69893V7.52143V8.02143H6.04986H8.06258Z"/>
 </svg>
-              </div><span>Restaurants </span>
+              </div><span>Restaurants  </span>
             </button>
           </div>
         </div>
@@ -564,7 +564,7 @@
         <button class="popup-close popup__close hover" type="button">
            <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> 
+</svg>
         </button>
         <div class="popup__body-rows">
           <div class="popup__body-col"> 
@@ -593,8 +593,31 @@
           </div>
         </div>
       </div>
-      <div class="popup__overlay popup-close">Back</div>
+      <div class="popup__close-2 popup-close">Back</div>
     </div>
-    <script src="js/app.min.js?_v=20230113113306"> </script>
+    <div class="popup brochure-popup" id="brochure-popup">
+      <div class="popup__body"> 
+        <button class="popup-close popup__close hover" type="button">
+           <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <div class="popup__bg multiple">
+          <div class="popup__bg-img first active"><picture><source srcset="img/popup-1.webp" type="image/webp"><img src="img/popup-1.png" alt="" draggable="false"/></picture></div>
+          <div class="popup__bg-img"> <picture><source srcset="img/popup-2.webp" type="image/webp"><img src="img/popup-2.png" alt="" draggable="false"/></picture></div>
+          <div class="popup__bg-img last"> <picture><source srcset="img/popup-3.webp" type="image/webp"><img src="img/popup-3.png" alt="" draggable="false"/></picture></div>
+        </div>
+        <div class="popup__body-head">
+          <div class="popup__title"><span>Download</span> brochure in one click</div>
+          <div class="popup__tag-ul">
+            <div class="popup__tag-li">Masterplan</div>
+            <div class="popup__tag-li">Gallery</div>
+            <div class="popup__tag-li">Lifestyle</div>
+            <div class="popup__tag-li">Floor plans</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js?_v=20230113115830"> </script>
   </body>
 </html>

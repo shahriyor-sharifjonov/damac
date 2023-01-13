@@ -7,42 +7,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export function init() {
     const mm = gsap.matchMedia();
     mm.add("(min-width: 1200px)", () => {
-        if(document.querySelector('.amenities__item')){
-            let sections = gsap.utils.toArray(".amenities__item");
-            gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".amenities__body",
-                    pin: true,
-                    scrub: 1,
-                    snap: 0,
-                    markers: false,
-                    end: () =>
-                        "+=" + document.querySelector(".amenities__wrapper").offsetWidth,
-                    onLeave: () => {
-                            const nextSection = document.querySelector('.floor');
-                            const tl = gsap.timeline();
-                            tl.to(window, 0, { scrollTo: {y: nextSection.offsetTop}, ease: "circ.easeOut" });
-                    }
-                },
-            });
-        };
-        document.querySelectorAll('.amenities__item').forEach(el => {
-            const observer = new window.IntersectionObserver(([entry]) => {
-                if (entry.isIntersecting) {
-                    // enter
-                    el.classList.add('visible');
-                    return
-                }
-                // leave
-                el.classList.remove('visible');
-            }, {
-                root: null,
-                threshold: 0.7,
-            })
-            observer.observe(el);
-        });
         if(document.querySelector('.brochure__item')){
             let sections2 = gsap.utils.toArray(".brochure__item");
             gsap.to(sections2, {
@@ -80,6 +44,44 @@ export function init() {
                 },
             });
         };
+    })
+    .add("(min-width: 992px)", () => {
+        if(document.querySelector('.amenities__item')){
+            let sections = gsap.utils.toArray(".amenities__item");
+            gsap.to(sections, {
+                xPercent: -100 * (sections.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".amenities__body",
+                    pin: true,
+                    scrub: 1,
+                    snap: 0,
+                    markers: false,
+                    end: () =>
+                        "+=" + document.querySelector(".amenities__wrapper").offsetWidth,
+                    onLeave: () => {
+                            const nextSection = document.querySelector('.floor');
+                            const tl = gsap.timeline();
+                            tl.to(window, 0, { scrollTo: {y: nextSection.offsetTop}, ease: "circ.easeOut" });
+                    }
+                },
+            });
+        };
+        document.querySelectorAll('.amenities__item').forEach(el => {
+            const observer = new window.IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) {
+                    // enter
+                    el.classList.add('visible');
+                    return
+                }
+                // leave
+                el.classList.remove('visible');
+            }, {
+                root: null,
+                threshold: 0.7,
+            })
+            observer.observe(el);
+        });
     })
     if(document.querySelector('.about')){
         gsap.utils.toArray(".about").forEach(el => {
