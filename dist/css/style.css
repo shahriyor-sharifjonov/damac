@@ -3859,7 +3859,7 @@ button {
     width: 100%;
     min-width: 0;
     text-align: center;
-    padding: 126px 0;
+    padding: 20px 0 130px;
     position: relative;
     z-index: 4;
   }
@@ -4391,8 +4391,8 @@ button {
 
 @media (max-width: 420px) {
   .popup__close {
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
   }
 
   .popup__tag-item {
