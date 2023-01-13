@@ -21,6 +21,7 @@
 }
 
 .floor-plan{
+    padding: 0;
     &__modal{
         max-width: 1240px;
         width: 100%;
@@ -32,12 +33,14 @@
         position: relative;
         border: 2px solid #2F3A49;
         @media (max-width: 992px) {
-            height: 100%;
-        }
-        @media (max-width: 890px) {
+            width: calc(100% - 30px);
+            max-width: 630px;
+            height: max-content;
             flex-direction: column;
             background-color: #2F3A49;
             overflow-y: scroll;
+            border-radius: 10px;
+            border: 0;
         }
         &-back{
             position: absolute;
@@ -55,9 +58,6 @@
             justify-content: center;
             gap: 100px;
             @media (max-width: 992px) {
-                width: 480px;
-            }
-            @media (max-width: 890px) {
                 display: none;
             }
             &-img{
@@ -84,13 +84,10 @@
             align-items: center;
             justify-content: center;
             @media (max-width: 992px) {
-                width: calc(100% - 480px);
-                padding: 50px 15px;
-            }
-            @media (max-width: 890px) {
                 width: 100%;
-                max-width: 600px;
+                padding: 50px 15px;
                 height: auto;
+                gap: 10px;
             }
             .menu__input-text{
                 width: 100%;
@@ -130,6 +127,9 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 5px;
+                @include media(992){
+                    margin-top: 0;
+                }
             }            
             .menu__input-text::placeholder{
                 font-size: 14px;
@@ -142,33 +142,31 @@
             .menu__input-text {
                 margin-bottom: 20px;
                 margin-top: 10px;
+                @include media(992){
+                    margin-bottom: 15px;
+                    margin-top: 0;
+                }
             }
             .floor-mobile{
                 display: none;
-                padding: 20px;
-                gap: 20px;
                 flex-direction: column;
-                @media (max-width: 890px) {
+                align-items: center;
+                gap: 20px;
+                @media (max-width: 992px) {
                     display: flex;
                 }
                 img{
-                    width: 100%;
-                    max-width: 400px;
+                    height: 200px;
                 }
                 .floor-plan__from{
                     width: max-content;
                     margin: auto;
-                    padding: 10px 24px;
                     border-radius: 10px;
-                    background-color: white;
                     color: #5E7390;
-                    font-size: 16px;
+                    font-size: 14px;
                     border-radius: 20px;
                     box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
                 }
-            }
-            #menu-phone_number{
-                margin-top: 10px !important;
             }
             .iti__flag-container {
                 top: 10px;
@@ -202,11 +200,17 @@
                 font-size: 16px;
                 font-weight: 400;
                 padding: 10px 0 0;
+                @include media(992){
+                    display: none;
+                }
             }
         }
         &-logo{
             width: 200px;
             margin-bottom: 30px;
+            @include media(992){
+                display: none;
+            }
         }
     }
 }
@@ -222,9 +226,7 @@
     margin-bottom: 30px;
     text-align: center;
     @media (max-width: 992px) {
-        font-size: 44px;
-    }
-    @media (max-width: 440px) {
         font-size: 32px;
+        margin-bottom: 0px;
     }
 }

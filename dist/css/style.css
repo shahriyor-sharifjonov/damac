@@ -1235,6 +1235,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
 
 .floor__tab-item.active {
@@ -2638,6 +2639,10 @@ button {
   left: 0;
 }
 
+.floor-plan {
+  padding: 0;
+}
+
 .floor-plan__modal {
   max-width: 1240px;
   width: 100%;
@@ -2831,17 +2836,18 @@ button {
 
 .floor-plan__modal-right .floor-mobile {
   display: none;
-  padding: 20px;
-  gap: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
 .floor-plan__modal-right .floor-mobile img {
-  width: 100%;
-  max-width: 400px;
+  height: 200px;
 }
 
 .floor-plan__modal-right .floor-mobile .floor-plan__from {
@@ -2849,18 +2855,12 @@ button {
   width: -moz-max-content;
   width: max-content;
   margin: auto;
-  padding: 10px 24px;
   border-radius: 10px;
-  background-color: white;
   color: #5E7390;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-}
-
-.floor-plan__modal-right #menu-phone_number {
-  margin-top: 10px !important;
 }
 
 .floor-plan__modal-right .iti__flag-container {
@@ -2944,11 +2944,6 @@ button {
 }
 
 @media (max-width: 1200px) {
-  .header__scroll {
-    right: 50px;
-    top: 90px;
-  }
-
   .footer__list {
     max-width: 992px;
     -ms-flex-wrap: wrap;
@@ -3096,7 +3091,8 @@ button {
   }
 
   .header__scroll {
-    display: none;
+    right: 50px;
+    bottom: 50px;
   }
 
   .intro::before {
@@ -3292,35 +3288,19 @@ button {
   }
 
   .floor-plan__modal {
-    height: 100%;
-  }
-
-  .floor-plan__modal-left {
-    width: 480px;
-  }
-
-  .floor-plan__modal-right {
-    width: calc(100% - 480px);
-    padding: 50px 15px;
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 44px;
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 44px;
-  }
-}
-
-@media (max-width: 890px) {
-  .floor-plan__modal {
+    width: calc(100% - 30px);
+    max-width: 630px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #2F3A49;
     overflow-y: scroll;
+    border-radius: 10px;
+    border: 0;
   }
 
   .floor-plan__modal-left {
@@ -3329,14 +3309,41 @@ button {
 
   .floor-plan__modal-right {
     width: 100%;
-    max-width: 600px;
+    padding: 50px 15px;
     height: auto;
+    gap: 10px;
+  }
+
+  .floor-plan__modal-right .menu__lower-btn-con {
+    margin-top: 0;
+  }
+
+  .floor-plan__modal-right .menu__input-text {
+    margin-bottom: 15px;
+    margin-top: 0;
   }
 
   .floor-plan__modal-right .floor-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .floor-plan__modal-right-title {
+    font-size: 44px;
+  }
+
+  .floor-plan__modal-right label {
+    display: none;
+  }
+
+  .floor-plan__modal-logo {
+    display: none;
+  }
+
+  .floor-plan__modal-right-title {
+    font-size: 32px;
+    margin-bottom: 0px;
   }
 }
 
@@ -3382,6 +3389,11 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  .header__scroll {
+    right: 20px;
+    bottom: 20px;
   }
 
   .footer__list:nth-of-type(2) {
@@ -3513,8 +3525,11 @@ button {
   }
 
   .floor__tab {
-    gap: 7px;
+    gap: 0px;
     margin-bottom: 25px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .floor__tab-item {
@@ -3774,10 +3789,6 @@ button {
 }
 
 @media (max-width: 440px) {
-  .floor-plan__modal-right-title {
-    font-size: 32px;
-  }
-
   .floor-plan__modal-right-title {
     font-size: 32px;
   }

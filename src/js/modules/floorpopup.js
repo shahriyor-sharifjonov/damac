@@ -15,10 +15,12 @@ export function init() {
             if(button.classList.contains('take-content')){
                 const price = button.parentElement.querySelector('.price').innerHTML;
                 document.querySelectorAll('.floor-plan__from').forEach(el => {
-                    
+                    el.innerHTML = 'Staring from AED '+ price
                 })
                 const image = button.parentElement.parentElement.querySelector('.floor__item-img img').getAttribute('src');
-                
+                document.querySelectorAll('.floor-plan__img').forEach(el => {
+                    el.setAttribute('src',image)
+                })
             } 
             const target = button.getAttribute('data-popup');
             const popup = document.querySelector(target);
