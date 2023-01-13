@@ -144,9 +144,6 @@
         justify-content: center;
         gap: 28px;
         margin-bottom: 50px;
-        @include media(576){
-            gap: 10px;
-        }
         @include media(768){
             gap: 7px;
             margin-bottom: 25px;

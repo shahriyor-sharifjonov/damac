@@ -3328,7 +3328,7 @@ button {
     width: 100%;
   }
 
-  .popup__title {
+  .popup__title-md {
     font-size: 36px;
   }
 
@@ -3635,7 +3635,7 @@ button {
     background-color: #000000;
   }
 
-  .popup__title {
+  .popup__title-md {
     max-width: 100%;
     width: 100%;
     min-width: 0;
@@ -3645,7 +3645,7 @@ button {
     z-index: 4;
   }
 
-  .popup__title span {
+  .popup__title-md span {
     color: #fff;
   }
 
@@ -4095,10 +4095,6 @@ button {
     font-size: 120px;
   }
 
-  .floor__tab {
-    gap: 10px;
-  }
-
   .brochure__sm-title {
     margin-bottom: 10px;
   }
@@ -4171,7 +4167,7 @@ button {
     padding: 50px 24px 24px;
   }
 
-  .popup__title {
+  .popup__title-md {
     font-size: 26px;
   }
 
