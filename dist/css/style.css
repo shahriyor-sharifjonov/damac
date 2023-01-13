@@ -3740,8 +3740,7 @@ button {
   }
 
   .header__scroll {
-    right: 20px;
-    bottom: 20px;
+    display: none;
   }
 
   .footer__list:nth-of-type(2) {

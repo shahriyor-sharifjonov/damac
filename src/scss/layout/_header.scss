@@ -148,8 +148,7 @@
         bottom: 50px;
       }
       @include media(768){
-        right: 20px;
-        bottom: 20px;
+        display: none;
       }
   }
 }
