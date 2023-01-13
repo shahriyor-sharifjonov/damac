@@ -4324,6 +4324,14 @@ button {
     font-size: 18px;
   }
 
+  .popup__bg-md {
+    height: 250px;
+  }
+
+  .popup__title-md {
+    padding: 70px 0;
+  }
+
   .brochure-popup .popup__body {
     padding: 40px 30px;
   }

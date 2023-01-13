@@ -444,6 +444,14 @@
         &__tag-item {
             font-size: 18px;
         }
+
+        &__bg-md {
+            height: 250px;
+        }
+
+        &__title-md {
+            padding: 70px 0;
+        }
     }
 
     @media(max-width: 420px) {
@@ -456,6 +464,8 @@
         &__tag-item {
             width: 100%;
         }
+
+
     }
 }
 
