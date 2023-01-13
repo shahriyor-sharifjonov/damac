@@ -4344,6 +4344,10 @@ button {
        object-position: 160px;
   }
 
+  .intro__scroll {
+    display: none;
+  }
+
   .floor__item-title {
     margin-bottom: 20px;
   }

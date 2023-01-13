@@ -112,6 +112,9 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        @include media(575){
+            display: none;
+        }
         &:active{
             text-decoration: none;
         }
