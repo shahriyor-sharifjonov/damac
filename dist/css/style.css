@@ -4336,8 +4336,8 @@ button {
 
 @media (max-width: 420px) {
   .popup__close {
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
   }
 
   .popup__tag-item {
