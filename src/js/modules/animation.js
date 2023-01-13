@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export function init() {
     const mm = gsap.matchMedia();
-    mm.add("(min-width: 1200px)", () => {
+    mm.add("(min-width: 1200px)", () => { 
         if(document.querySelector('.amenities__item')){
             let sections = gsap.utils.toArray(".amenities__item");
             gsap.to(sections, {

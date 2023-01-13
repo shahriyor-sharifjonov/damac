@@ -14,8 +14,12 @@ export function init() {
         button.addEventListener('click', () => {
             if(button.classList.contains('take-content')){
                 const price = button.parentElement.querySelector('.price').innerHTML;
+                document.querySelectorAll('.floor-plan__from').forEach(el => {
+                    
+                })
                 const image = button.parentElement.parentElement.querySelector('.floor__item-img img').getAttribute('src');
-            }
+                
+            } 
             const target = button.getAttribute('data-popup');
             const popup = document.querySelector(target);
             popup.classList.add('active');
