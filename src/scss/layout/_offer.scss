@@ -14,28 +14,6 @@
             font-size: 28px;
         }
     }
-    &__title{
-        font-weight: 600;
-        font-size: 60px;
-        line-height: 115%;
-        text-align: center;
-        letter-spacing: 0.01em;
-        color: #FFFFFF;
-        margin-bottom: 61px;
-        max-width: 712px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        @include media(1200){
-            font-size: 54px;
-        }
-        @include media(768){
-            font-size: 44px;
-        }
-        @include media(576){
-            font-size: 32px;
-        }
-    }
     &__row{
         display: flex;
         justify-content: space-between;
