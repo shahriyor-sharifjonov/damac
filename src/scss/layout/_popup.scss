@@ -22,7 +22,7 @@
         pointer-events: all;
     }
 
-    &__overlay{
+    &__overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -44,7 +44,8 @@
         display: flex;
         padding: 43px 58px 58px 58px;
         gap: 100px;
-        @include media(768){
+
+        @include media(768) {
             gap: 30px;
         }
     }
@@ -140,7 +141,8 @@
             align-items: center;
             justify-content: center;
             gap: 28px;
-            @include media(768){
+
+            @include media(768) {
                 gap: 15px 28px;
             }
         }
@@ -208,6 +210,7 @@
             &::placeholder {
                 color: rgba(255, 255, 255, 0.4);
                 opacity: 0.5;
+                font-weight: 400;
             }
         }
 
@@ -233,7 +236,8 @@
         align-items: center;
         justify-content: center;
         margin-top: 60px;
-        @include media(575){
+
+        @include media(575) {
             margin-top: 30px;
         }
     }
@@ -619,10 +623,17 @@
         max-width: 971px;
         width: 100%;
         padding: 80px;
+        display: block;
+        position: relative;
 
         &-head {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            max-width: 700px;
+            width: 100%;
         }
     }
 
@@ -664,6 +675,62 @@
             background-color: #FFFFFF;
             border-radius: 50%;
             background-repeat: no-repeat;
+        }
+    }
+
+    .popup__form {
+        margin-top: 68px;
+    }
+
+    .popup__input-hr {
+        height: 0.5px;
+        &::after {
+            content: "";
+            filter: blur(5px);
+            height: 0.5px;
+            width: 100px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #DCC39E;
+            display: none;
+        }
+    }
+
+    .popup__input input {
+        position: relative;
+
+        &:focus-visible+.popup__input-hr {
+            position: relative;
+            background-color: #DCC39E;
+
+            &::after {
+                display: block;
+            }
+        }
+
+    }
+
+    .popup__image {
+        position: absolute;
+        top: 15%;
+        left: 45%;
+    }
+
+    @media(max-width: 770px) {
+        .popup__image {
+            display: none;
+        }
+    }
+
+    @media(max-width: 576px) {
+        .popup__body {
+            padding: 40px;
+        }
+
+        .popup__tag-ul {
+            grid-template-columns: 1fr;
         }
     }
 }

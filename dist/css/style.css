@@ -2559,26 +2559,31 @@ button {
 .popup__input input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
+  font-weight: 400;
 }
 
 .popup__input input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
+  font-weight: 400;
 }
 
 .popup__input input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
+  font-weight: 400;
 }
 
 .popup__input input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
+  font-weight: 400;
 }
 
 .popup__input input::placeholder {
   color: rgba(255, 255, 255, 0.4);
   opacity: 0.5;
+  font-weight: 400;
 }
 
 .popup__input-hr {
@@ -2855,6 +2860,8 @@ button {
   max-width: 971px;
   width: 100%;
   padding: 80px;
+  display: block;
+  position: relative;
 }
 
 .brochure-popup .popup__body-head {
@@ -2864,6 +2871,14 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  max-width: 700px;
+  width: 100%;
 }
 
 .brochure-popup .popup__title {
@@ -2911,6 +2926,47 @@ button {
   background-color: #FFFFFF;
   border-radius: 50%;
   background-repeat: no-repeat;
+}
+
+.brochure-popup .popup__form {
+  margin-top: 68px;
+}
+
+.brochure-popup .popup__input-hr {
+  height: 0.5px;
+}
+
+.brochure-popup .popup__input-hr::after {
+  content: "";
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  height: 0.5px;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #DCC39E;
+  display: none;
+}
+
+.brochure-popup .popup__input input {
+  position: relative;
+}
+
+.brochure-popup .popup__input input:focus-visible + .popup__input-hr {
+  position: relative;
+  background-color: #DCC39E;
+}
+
+.brochure-popup .popup__input input:focus-visible + .popup__input-hr::after {
+  display: block;
+}
+
+.brochure-popup .popup__image {
+  position: absolute;
+  top: 15%;
+  left: 45%;
 }
 
 @media (min-width: 576px) {
@@ -3356,6 +3412,10 @@ button {
   .popup__tag {
     margin-top: 24px;
   }
+
+  .brochure-popup .popup__image {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3788,6 +3848,15 @@ button {
 
   .popup__tag-item {
     font-size: 18px;
+  }
+
+  .brochure-popup .popup__body {
+    padding: 40px;
+  }
+
+  .brochure-popup .popup__tag-ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
