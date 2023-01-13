@@ -143,10 +143,8 @@
         justify-content: center;
         gap: 28px;
         margin-bottom: 50px;
-        @include media(768){
-            gap: 0px;
-            margin-bottom: 25px;
-            justify-content: space-between;
+        @include media(576){
+            gap: 10px;
         }
         &-item{
             padding: 8px 22px;
