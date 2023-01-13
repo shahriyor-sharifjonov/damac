@@ -152,7 +152,7 @@ mixin popup()
 
     .popup.brochure-popup#brochure-popup
         .popup__body 
-            button(type="button").popup-close.popup__close.hover 
+            button(type="button").popup-close.popup__close.hover.popup__close-md
                 <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -160,12 +160,14 @@ mixin popup()
                 img(src="@img/bg-brochure-popup.png" alt="" draggable="false")
             .popup__inner-wrap
                 .popup__body-head
-                    .popup__title <span>Download</span> brochure in one click
+                    .popup__title <span>descriptive</span> brochure <span class="sm-none">in one click</span>
                     .popup__tag-ul
                         .popup__tag-li Masterplan
                         .popup__tag-li Gallery
                         .popup__tag-li Lifestyle
                         .popup__tag-li Floor plans
+                .popup__image
+                    img(src="@img/popup-brochure.png" alt="")
 
                 form(action="#" method="post").popup__form.popup__form-2
                     .popup__input
@@ -184,6 +186,3 @@ mixin popup()
                     input(type="hidden" name="language" value="english")
                     input(type="hidden" name="current_page" value="")
                     button(type="submit").popup__button.hover Download 
-
-                .popup__image
-                    img(src="@img/popup-brochure.png" alt="")

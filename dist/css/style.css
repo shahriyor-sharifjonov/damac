@@ -524,6 +524,7 @@ button {
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2473,6 +2474,10 @@ button {
   color: #DCC39E;
 }
 
+.popup__title .sm-none {
+  color: #fff;
+}
+
 .popup__p {
   font-weight: 400;
   font-size: 20px;
@@ -2621,9 +2626,9 @@ button {
   bottom: -180px;
   left: 0;
   z-index: 3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(68.48%, #000000), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, #000000 68.48%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(0deg, #000000 68.48%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(68.48%, #2B3845), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(bottom, #2B3845 68.48%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, #2B3845 68.48%, rgba(0, 0, 0, 0) 100%);
 }
 
 .popup__bg-md img {
@@ -2858,7 +2863,7 @@ button {
 
 .brochure-popup .popup__image {
   position: absolute;
-  top: 0%;
+  top: 40%;
   left: 45%;
 }
 
@@ -3211,6 +3216,10 @@ button {
     max-width: 992px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .intro__background img {
+    width: auto;
   }
 
   .intro__title {
@@ -3610,112 +3619,6 @@ button {
   }
 }
 
-@media (max-width: 770px) {
-  .popup__body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: #000000;
-  }
-
-  .popup__title-md {
-    max-width: 100%;
-    width: 100%;
-    min-width: 0;
-    text-align: center;
-    padding: 126px 0;
-    position: relative;
-    z-index: 4;
-  }
-
-  .popup__title-md span {
-    color: #fff;
-  }
-
-  .popup__bg {
-    display: none;
-  }
-
-  .popup__content,
-  .popup__form {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .popup__form {
-    position: relative;
-    z-index: 9;
-  }
-
-  .popup__p {
-    display: none;
-  }
-
-  .popup__tag {
-    margin-top: 24px;
-    display: none;
-  }
-
-  .popup__input label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .popup__input input {
-    padding-bottom: 4px;
-  }
-
-  .popup__button {
-    font-weight: 600;
-    font-size: 15.1777px;
-    line-height: 19px;
-    color: #FFFFFF;
-    background: -o-linear-gradient(bottom, #5E7390, #5E7390), -o-linear-gradient(294.12deg, #EEC8AA -83.36%, #C7825B 184.44%);
-    background: linear-gradient(0deg, #5E7390, #5E7390), linear-gradient(155.88deg, #EEC8AA -83.36%, #C7825B 184.44%);
-  }
-
-  .popup__close-md {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    top: 0;
-    right: 0;
-    -webkit-transform: translate(50%, -50%);
-        -ms-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
-  }
-
-  .popup__close-md svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .popup__close-md path {
-    stroke: #2F3B46;
-  }
-
-  .popup__bg-md {
-    display: block;
-  }
-
-  .brochure-popup .popup__image {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
   .header__tel {
     display: none;
@@ -3735,8 +3638,7 @@ button {
   }
 
   .header__scroll {
-    right: 20px;
-    bottom: 20px;
+    display: none;
   }
 
   .footer__list:nth-of-type(2) {
@@ -3924,6 +3826,143 @@ button {
     gap: 15px 28px;
   }
 
+  .popup__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #2B3845;
+  }
+
+  .popup#register input::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  .popup#register input::-moz-placeholder {
+    color: transparent;
+  }
+
+  .popup#register input:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .popup#register input::-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .popup#register input::placeholder {
+    color: transparent;
+  }
+
+  .popup__title-md {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    padding: 126px 0;
+    position: relative;
+    z-index: 4;
+  }
+
+  .popup__title-md span {
+    color: #fff;
+  }
+
+  .popup__bg {
+    display: none;
+  }
+
+  .popup__content,
+  .popup__form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .popup__form {
+    position: relative;
+    z-index: 9;
+  }
+
+  .popup__p {
+    display: none;
+  }
+
+  .popup__tag {
+    margin-top: 24px;
+    display: none;
+  }
+
+  .popup.popup__main .popup__input input::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  .popup.popup__main .popup__input input::-moz-placeholder {
+    color: transparent;
+  }
+
+  .popup.popup__main .popup__input input:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .popup.popup__main .popup__input input::-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .popup.popup__main .popup__input input::placeholder {
+    color: transparent;
+  }
+
+  .popup__input label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .popup__input input {
+    padding-bottom: 4px;
+  }
+
+  .popup__button {
+    font-weight: 600;
+    font-size: 15.1777px;
+    line-height: 19px;
+  }
+
+  .popup__close-md {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
+
+  .popup__close-md svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .popup__close-md path {
+    stroke: #2F3B46;
+  }
+
+  .popup__bg-md {
+    display: block;
+  }
+
   .handover-popup .popup__body {
     height: inherit;
     padding: 0 0;
@@ -3981,6 +4020,113 @@ button {
 
   .handover-popup .popup__close-2 {
     display: block;
+  }
+
+  .brochure-popup .popup__body {
+    padding: 50px;
+  }
+
+  .brochure-popup .popup__body-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .brochure-popup .popup__title {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .brochure-popup .popup__tag-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .brochure-popup .popup__image {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+  }
+
+  .brochure-popup .popup__image img {
+    width: 100%;
+  }
+
+  .brochure-popup .popup__tag-li {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 96.5%;
+    color: #5E7390;
+  }
+
+  .brochure-popup .popup__tag-li::before {
+    background-color: #5E7390;
+  }
+
+  .brochure-popup .sm-none {
+    display: none;
+  }
+
+  .brochure-popup .popup__form-2 {
+    margin: 0;
+  }
+
+  .brochure-popup .popup__form-2 .popup__input-hr {
+    display: none;
+  }
+
+  .brochure-popup .popup__form-2 .popup__input {
+    padding: 10px 15px;
+    border: 0.5px solid #FFFFFF;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .brochure-popup .popup__form-2 input {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 129%;
+    color: #FFFFFF;
+    padding: 0;
+  }
+
+  .brochure-popup .popup__form-2 input::-webkit-input-placeholder {
+    color: #FFFFFF;
+  }
+
+  .brochure-popup .popup__form-2 input::-moz-placeholder {
+    color: #FFFFFF;
+  }
+
+  .brochure-popup .popup__form-2 input:-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+
+  .brochure-popup .popup__form-2 input::-ms-input-placeholder {
+    color: #FFFFFF;
+  }
+
+  .brochure-popup .popup__form-2 input::placeholder {
+    color: #FFFFFF;
   }
 }
 
@@ -4101,34 +4247,53 @@ button {
   }
 
   .brochure__sm .brochure__form-item-input::-webkit-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input::-moz-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input:-ms-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input::-ms-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input,
   .brochure__sm .brochure__form-item-input::placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .btn_2 {
-    font-size: 12.5px;
-    line-height: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
   }
 
   .location {
@@ -4160,7 +4325,7 @@ button {
   }
 
   .brochure-popup .popup__body {
-    padding: 40px;
+    padding: 40px 30px;
   }
 
   .brochure-popup .popup__tag-ul {
@@ -4218,8 +4383,8 @@ button {
 
 @media (max-width: 420px) {
   .popup__close {
-    top: 24px;
-    right: 24px;
+    top: 0;
+    right: 0;
   }
 
   .popup__tag-item {
