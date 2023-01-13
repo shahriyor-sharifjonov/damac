@@ -2,7 +2,7 @@ mixin popup()
     .popup#register 
         .popup__overlay.popup-close 
         .popup__body
-            button(type="button").popup-close.popup__close.hover 
+            button(type="button").popup-close.popup__close.hover.popup__close-md
                 <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg> 
@@ -13,6 +13,8 @@ mixin popup()
                     img(src="@img/popup-2.png" alt="" draggable="false")
                 .popup__bg-img.last 
                     img(src="@img/popup-3.png" alt="" draggable="false")
+            .popup__bg-md 
+                img(src="@img/amenities-1.png", alt="")
             .popup__content
                 p.popup__title <span>Descriptive brochure</span> about the project
                 p.popup__p that includes :
@@ -40,13 +42,29 @@ mixin popup()
                             span Floor plans
             form(action="#" method="post").popup__form
                 .popup__input
-                    input(type="text" name='name' placeholder="Your name" required)
+                    label(for="your-name")
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.307073C6.72256 0.305397 5.48755 0.75855 4.5225 1.58304C3.55744 2.40753 2.92738 3.54781 2.74839 4.79378C2.56941 6.03975 2.85355 7.30747 3.54848 8.36336C4.24341 9.41925 5.30229 10.1922 6.53005 10.5397C4.78539 10.7484 3.28913 11.3559 2.1611 12.4512C0.72621 13.8431 0 15.9173 0 18.6234C0 18.8047 0.0731242 18.9786 0.203286 19.1068C0.333449 19.235 0.509987 19.3071 0.694064 19.3071C0.878141 19.3071 1.05468 19.235 1.18484 19.1068C1.315 18.9786 1.38813 18.8047 1.38813 18.6234C1.38813 16.1476 2.05005 14.4779 3.13571 13.4243C4.22283 12.3692 5.84767 11.8222 8 11.8222C10.1523 11.8222 11.7772 12.3692 12.8658 13.4243C13.95 14.4793 14.6119 16.1476 14.6119 18.6234C14.6119 18.8047 14.685 18.9786 14.8152 19.1068C14.9453 19.235 15.1219 19.3071 15.3059 19.3071C15.49 19.3071 15.6665 19.235 15.7967 19.1068C15.9269 18.9786 16 18.8047 16 18.6234C16 15.9173 15.2738 13.8446 13.8374 12.4512C12.7123 11.3573 11.2146 10.7484 9.46995 10.5397C10.6936 10.1883 11.7477 9.41416 12.439 8.35929C13.1303 7.30441 13.4125 6.03945 13.2339 4.79624C13.0553 3.55304 12.4279 2.41488 11.4666 1.59038C10.5053 0.765877 9.2746 0.310273 8 0.307073ZM4.09132 5.52487C4.09132 4.50369 4.50313 3.52433 5.23615 2.80225C5.96917 2.08016 6.96335 1.6745 8 1.6745C9.03664 1.6745 10.0308 2.08016 10.7639 2.80225C11.4969 3.52433 11.9087 4.50369 11.9087 5.52487C11.9087 6.54606 11.4969 7.52542 10.7639 8.2475C10.0308 8.96959 9.03664 9.37525 8 9.37525C6.96335 9.37525 5.96917 8.96959 5.23615 8.2475C4.50313 7.52542 4.09132 6.54606 4.09132 5.52487Z" fill="white"/>
+                        </svg>
+                        span Your name
+                    input(type="text" name='name' id="your-name" placeholder="Your name" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type='email' name='email' placeholder="Your email" required)
+                    label(for="your-email")
+                        <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.8801 1.14465H2.53395C1.52497 1.14465 0.707031 1.98412 0.707031 3.01965V14.2697C0.707031 15.3052 1.52497 16.1447 2.53395 16.1447H17.8801C18.8891 16.1447 19.707 15.3052 19.707 14.2697V3.01965C19.707 1.98412 18.8891 1.14465 17.8801 1.14465Z" stroke="white" stroke-width="1.08412" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.62891 4.14551L10.2058 9.39551L16.7828 4.14551" stroke="white" stroke-width="1.08412" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        span Your gmail
+                    input(type='email' name='email' id="your-email" placeholder="Your email" required)
                     .popup__input-hr 
                 .popup__input
-                    input(type='tel' name='phone' placeholder="Your number" required)
+                    label(for="your-number")
+                        <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.91193 1.00662L4.37619 0.631605C5.04275 0.460616 5.7597 0.501723 6.39322 0.747254C7.02675 0.992785 7.53353 1.42596 7.81898 1.96591L8.73018 3.68948C8.97571 4.1538 9.04411 4.67183 8.92577 5.17088C8.80744 5.66993 8.50832 6.12495 8.07038 6.4721L6.47821 7.7344C6.45853 7.75003 6.44239 7.76858 6.43058 7.78915C6.26386 8.07867 6.51702 8.85195 7.31002 10.0205C8.20445 11.3376 8.89513 11.8581 9.21533 11.7778L11.305 11.234C11.8773 11.0855 12.4899 11.0928 13.057 11.2552C13.6241 11.4175 14.1172 11.7267 14.4673 12.1393L15.7622 13.6641C16.1687 14.1429 16.357 14.7309 16.2921 15.3188C16.2272 15.9068 15.9136 16.4547 15.4093 16.8608L14.2953 17.7571C13.9079 18.0691 13.4374 18.2968 12.9241 18.4207C12.4108 18.5447 11.8698 18.5612 11.3473 18.4688C8.24503 17.9198 5.46557 15.7957 2.98514 12.1431C0.503831 8.48818 -0.26976 5.37555 0.726999 2.8157C0.893851 2.38713 1.17957 1.99901 1.56002 1.68414C1.94047 1.36926 2.40447 1.13688 2.91281 1.00662H2.91193ZM3.29476 2.08367C2.98974 2.16178 2.71132 2.30118 2.48302 2.49008C2.25471 2.67898 2.08324 2.91183 1.98309 3.16896C1.12394 5.3748 1.81991 8.17692 4.13097 11.5806C6.44028 14.982 8.94364 16.8945 11.6164 17.3671C11.93 17.4225 12.2547 17.4126 12.5629 17.3381C12.871 17.2637 13.1534 17.1269 13.3858 16.9395L14.499 16.044C14.7706 15.8254 14.9397 15.5304 14.9747 15.2138C15.0097 14.8972 14.9084 14.5805 14.6896 14.3227L13.3947 12.7971C13.2062 12.575 12.9407 12.4085 12.6354 12.3211C12.3301 12.2337 12.0003 12.2297 11.6922 12.3096L9.59727 12.8549C8.43821 13.1481 7.34795 12.3268 6.16419 10.5823C5.16125 9.10621 4.81371 8.03966 5.2424 7.29488C5.32532 7.15088 5.43823 7.02112 5.57583 6.91162L7.168 5.64931C7.40391 5.46239 7.56505 5.21735 7.6288 4.94858C7.69256 4.67981 7.65573 4.40081 7.52348 4.15075L6.61229 2.42793C6.45859 2.13711 6.18565 1.90381 5.84445 1.77158C5.50324 1.63936 5.1171 1.61725 4.75814 1.7094L3.29387 2.08442L3.29476 2.08367Z" fill="white"/>
+                        </svg>
+                        span Your number
+                    input(type='tel' name='phone' id="your-number" placeholder="Your number" required)
                     .popup__input-hr 
                 input(type="hidden" name="project" value="damac")
                 input(type="hidden" name="description" value="page_form")
@@ -132,7 +150,6 @@ mixin popup()
                     .popup__body-item 20% On Completion
         .popup__close-2.popup-close Back
 
-
     .popup.brochure-popup#brochure-popup
         .popup__body 
             button(type="button").popup-close.popup__close.hover 
@@ -167,9 +184,6 @@ mixin popup()
                     input(type="hidden" name="language" value="english")
                     input(type="hidden" name="current_page" value="")
                     button(type="submit").popup__button.hover Download 
-                
+
                 .popup__image
-                    img(src="@img/popup-brochure.png", alt="")
-
-
-
+                    img(src="@img/popup-brochure.png" alt="")
