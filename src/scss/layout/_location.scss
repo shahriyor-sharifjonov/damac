@@ -20,7 +20,7 @@
         }
         @include media(768){
             width: 100%;
-            padding: 10px 26px;
+            padding: 17px 26px;
         }
         // @include media(400){
         //     width: 100%;
@@ -36,6 +36,10 @@
                 justify-content: space-between;
                 align-items: center;
                 cursor: pointer;
+                @include media(768){
+                    justify-content: center;
+                    gap: 25px;
+                }
                 svg{
                     transition: 300ms ease;
                     @include media(992){
