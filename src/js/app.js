@@ -10,6 +10,7 @@ import * as slider from "./modules/slider.js";
 import * as popup from "./modules/popup.js";
 import * as header from "./modules/header.js";
 import * as amenities from "./modules/amenities.js";
+import * as floorpopup from "./modules/floorpopup.js";
 
 // smoothscroll.init();
 functions.isWebp();
@@ -23,4 +24,5 @@ slider.init();
 popup.init();
 functions.showmore();
 amenities.init();
+floorpopup.init();
 header.init();
