@@ -3132,7 +3132,6 @@ button {
   font-size: 64px;
   font-weight: 400;
   line-height: 75px;
-  font-family: "Tenor Sans", sans-serif;
   color: white;
   text-transform: uppercase;
 }
@@ -3155,7 +3154,6 @@ button {
   font-size: 64px;
   font-weight: 600;
   line-height: 100%;
-  font-family: "Tenor Sans", sans-serif;
   color: white;
   text-transform: uppercase;
   margin-bottom: 30px;
