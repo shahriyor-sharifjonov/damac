@@ -4,6 +4,9 @@
     isolation: isolate;
     display: flex;
     overflow: hidden;
+    @include media(575){
+        min-height: 400px;
+    }
     &::before{
         content: '';
         position: absolute;
@@ -19,6 +22,9 @@
             height: 1150px;
             width: 100%;
             background: linear-gradient(180deg, rgba(43, 56, 69, 0) 0%, #2B3845 61.35%);
+        }
+        @include media(575){
+            height: 800px;
         }
     }
     &__body{
@@ -51,7 +57,7 @@
                 object-position: 100px;
             }
             @include media(575){
-                object-position: 160px;
+                object-position: 100px;
             }
         }
     }

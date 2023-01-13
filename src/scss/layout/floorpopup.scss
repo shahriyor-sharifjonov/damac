@@ -98,7 +98,7 @@
             .menu__input-text{
                 width: 100%;
                 padding: 12px;
-                border: 1px solid white;
+                border: 0.5px solid white;
                 background-color: transparent;
                 outline: none;
                 caret-color: white;
@@ -107,10 +107,14 @@
             .menu__submit {
                 width: calc(100% - 124px);
                 height: 42px;
-                background-color: #5e7390;
+                background: #DCC39E;
                 border: 0;
                 color: white;
                 cursor: pointer;
+                font-size: 18px;
+                color: #2B3845;
+                text-transform: uppercase;
+                font-weight: 500;
                 @include media(992){
                     width: 100%;
                     max-width: none;

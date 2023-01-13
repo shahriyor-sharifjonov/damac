@@ -241,6 +241,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 60px;
+        text-transform: uppercase;
 
         @include media(575) {
             margin-top: 30px;
@@ -670,6 +671,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 16px 28px;
+        @include media(575){
+            gap: 9px;
+        }
     }
 
     .popup__tag-li {

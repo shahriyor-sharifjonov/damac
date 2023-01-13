@@ -2572,6 +2572,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 60px;
+  text-transform: uppercase;
 }
 
 .popup__input label {
@@ -2998,7 +2999,7 @@ button {
 .floor-plan__modal-right .menu__input-text {
   width: 100%;
   padding: 12px;
-  border: 1px solid white;
+  border: 0.5px solid white;
   background-color: transparent;
   outline: none;
   caret-color: white;
@@ -3008,10 +3009,14 @@ button {
 .floor-plan__modal-right .menu__submit {
   width: calc(100% - 124px);
   height: 42px;
-  background-color: #5e7390;
+  background: #DCC39E;
   border: 0;
   color: white;
   cursor: pointer;
+  font-size: 18px;
+  color: #2B3845;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .floor-plan__modal-right .menu__about-project-btn {
@@ -4343,9 +4348,17 @@ button {
     display: block;
   }
 
+  .intro {
+    min-height: 400px;
+  }
+
+  .intro::before {
+    height: 800px;
+  }
+
   .intro__background img {
-    -o-object-position: 160px;
-       object-position: 160px;
+    -o-object-position: 100px;
+       object-position: 100px;
   }
 
   .floor__item-title {
@@ -4376,6 +4389,10 @@ button {
 
   .popup__button {
     margin-top: 30px;
+  }
+
+  .brochure-popup .popup__tag-ul {
+    gap: 9px;
   }
 }
 
