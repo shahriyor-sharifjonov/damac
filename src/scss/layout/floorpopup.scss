@@ -39,14 +39,20 @@
             flex-direction: column;
             background-color: #2F3A49;
             overflow-y: scroll;
-            border-radius: 10px;
             border: 0;
         }
         &-back{
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 10px;
+            top: 10px;
             cursor: pointer;
+            background-color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         &-left{
             padding: 80px 40px;
@@ -75,7 +81,7 @@
             }
         }
         &-right{
-            padding: 100px 60px;
+            padding: 60px;
             width: 530px;
             height: 100%;
             background-color: #2F3A49;
@@ -85,9 +91,9 @@
             justify-content: center;
             @media (max-width: 992px) {
                 width: 100%;
-                padding: 50px 15px;
+                padding: 50px 15px 15px;
                 height: auto;
-                gap: 10px;
+                gap: 20px;
             }
             .menu__input-text{
                 width: 100%;
@@ -105,6 +111,10 @@
                 border: 0;
                 color: white;
                 cursor: pointer;
+                @include media(992){
+                    width: 100%;
+                    max-width: none;
+                }
             }
             .menu__about-project-btn{
                 width: 42px;
@@ -113,6 +123,9 @@
                 justify-content: center;
                 align-items: center;
                 color: white;
+                @include media(992){
+                    display: none;
+                }
                 & i{
                     font-size: 25px;
                 }
@@ -218,7 +231,7 @@
 .floor-plan__modal-right-title{
     width: 100%;
     font-size: 64px;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 100%;
     font-family: 'Tenor Sans', sans-serif;
     color: white;
@@ -228,5 +241,8 @@
     @media (max-width: 992px) {
         font-size: 32px;
         margin-bottom: 0px;
+    }
+    span{
+        color: #DCC39E;
     }
 }
