@@ -553,6 +553,53 @@ button {
   margin-bottom: 54px;
 }
 
+.intro__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+.intro__scroll:active {
+  text-decoration: none;
+}
+
+.intro__scroll:hover span {
+  color: #DCC39E;
+}
+
+.intro__scroll span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+  margin-bottom: 10px;
+}
+
+.intro__scroll svg {
+  -webkit-animation: scroll 2s infinite;
+          animation: scroll 2s infinite;
+}
+
 @-webkit-keyframes scroll {
   0% {
     -webkit-transform: translateY(0);
