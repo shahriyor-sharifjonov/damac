@@ -56,7 +56,7 @@ mixin popup()
                 input(type="hidden" name="current_page" value="")
                 button(type="submit").popup__button.hover Download 
 
-    .floor-plan.popup#floorPopup
+    .floor-plan.popup#floorPopup 
         .blur.popup-close 
         .floor-plan__modal 
             .floor-plan__modal-back.popup-close 
@@ -139,21 +139,37 @@ mixin popup()
                 <svg width="13" height="13" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.2871 1.16699L1.28711 21.167M21.2871 21.167L1.28711 1.16699" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            .popup__bg.multiple
-                .popup__bg-img.first.active
-                    img(src="@img/popup-1.png" alt="" draggable="false")
-                .popup__bg-img 
-                    img(src="@img/popup-2.png" alt="" draggable="false")
-                .popup__bg-img.last 
-                    img(src="@img/popup-3.png" alt="" draggable="false")
-            .popup__body-head
-                .popup__title <span>Download</span> brochure in one click
-                .popup__tag-ul
-                    .popup__tag-li Masterplan
-                    .popup__tag-li Gallery
-                    .popup__tag-li Lifestyle
-                    .popup__tag-li Floor plans
+            .popup__brochure-bg
+                img(src="@img/bg-brochure-popup.png" alt="" draggable="false")
+            .popup__inner-wrap
+                .popup__body-head
+                    .popup__title <span>Download</span> brochure in one click
+                    .popup__tag-ul
+                        .popup__tag-li Masterplan
+                        .popup__tag-li Gallery
+                        .popup__tag-li Lifestyle
+                        .popup__tag-li Floor plans
 
+                form(action="#" method="post").popup__form.popup__form-2
+                    .popup__input
+                        input(type="text" name='name' placeholder="Your name" required)
+                        .popup__input-hr 
+                    .popup__input
+                        input(type='email' name='email' placeholder="Your email" required)
+                        .popup__input-hr 
+                    .popup__input
+                        input(type='tel' name='phone' placeholder="Your number" required)
+                        .popup__input-hr 
+                    input(type="hidden" name="project" value="damac")
+                    input(type="hidden" name="description" value="page_form")
+                    input(type="hidden" name="duration" value="").duration
+                    input(type="hidden" name="pasted_fields" value="").pasted_fields
+                    input(type="hidden" name="language" value="english")
+                    input(type="hidden" name="current_page" value="")
+                    button(type="submit").popup__button.hover Download 
+                
+                .popup__image
+                    img(src="@img/popup-brochure.png", alt="")
 
 
 
