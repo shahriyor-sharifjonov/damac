@@ -4247,34 +4247,53 @@ button {
   }
 
   .brochure__sm .brochure__form-item-input::-webkit-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input::-moz-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input:-ms-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input::-ms-input-placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .brochure__form-item-input,
   .brochure__sm .brochure__form-item-input::placeholder {
-    font-size: 12px;
-    line-height: 176%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .brochure__sm .btn_2 {
-    font-size: 12.5px;
-    line-height: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
   }
 
   .location {
