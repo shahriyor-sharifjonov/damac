@@ -512,10 +512,12 @@ button {
 .intro__background {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  isolation: isolate;
   z-index: -2;
+  will-change: transform;
 }
 
 .intro__background img {
@@ -1235,6 +1237,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  white-space: nowrap;
 }
 
 .floor__tab-item.active {
@@ -1363,7 +1366,7 @@ button {
 .amenities__body {
   position: relative;
   width: 100%;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -2508,7 +2511,7 @@ button {
 
 .popup__title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 42px;
   line-height: 105.4%;
   text-transform: capitalize;
   color: #fff;
@@ -2678,161 +2681,6 @@ button {
      object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-.floor-plan__modal {
-  max-width: 1240px;
-  width: 100%;
-  background-color: #E8E8E8;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  border: 2px solid #2F3A49;
-  min-width: 410px;
-}
-
-.floor-plan__modal-back {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
-}
-
-.floor-plan__modal-left {
-  padding: 80px 40px;
-  width: calc(100% - 600px);
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 100px;
-}
-
-.floor-plan__modal-left-img {
-  width: 100%;
-  max-width: 400px;
-}
-
-.floor-plan__modal-left .floor-plan__from {
-  padding: 10px 24px;
-  border-radius: 10px;
-  background-color: white;
-  color: #5E7390;
-  font-size: 16px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-}
-
-.floor-plan__modal-right {
-  padding: 80px 40px;
-  width: 600px;
-  height: 100%;
-  background-color: #2F3A49;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.floor-plan__modal-right .menu__input-text {
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.floor-plan__modal-right .floor-mobile {
-  display: none;
-  padding: 20px;
-  gap: 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.floor-plan__modal-right .floor-mobile img {
-  width: 100%;
-  max-width: 400px;
-}
-
-.floor-plan__modal-right .floor-mobile .floor-plan__from {
-  padding: 10px 24px;
-  border-radius: 10px;
-  background-color: white;
-  color: #5E7390;
-  font-size: 16px;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-}
-
-.floor-plan__modal-right #menu-phone_number {
-  margin-top: 10px !important;
-}
-
-.floor-plan__modal-right .iti__flag-container {
-  top: 10px;
-}
-
-.floor-plan__modal-right .menu__submit {
-  max-width: calc(100% - 186px);
-}
-
-.floor-plan__modal-right .menu__lower-btn-con {
-  margin-top: 20px;
-}
-
-.floor-plan__modal-right .menu__about-project-btn:hover {
-  background-color: #5E7390;
-}
-
-.floor-plan__modal-right-title {
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 75px;
-  font-family: "Tenor Sans", sans-serif;
-  color: white;
-  text-transform: uppercase;
-}
-
-.floor-plan__modal-right label {
-  width: 100%;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 10px 0 0;
-}
-
-.floor-plan__modal-logo {
-  width: 300px;
-  margin-bottom: 40px;
 }
 
 .handover-popup {
@@ -3093,6 +2941,10 @@ button {
   left: 0;
 }
 
+.floor-plan {
+  padding: 0;
+}
+
 .floor-plan__modal {
   max-width: 1240px;
   width: 100%;
@@ -3113,9 +2965,22 @@ button {
 
 .floor-plan__modal-back {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .floor-plan__modal-left {
@@ -3155,7 +3020,7 @@ button {
 }
 
 .floor-plan__modal-right {
-  padding: 100px 60px;
+  padding: 60px;
   width: 530px;
   height: 100%;
   background-color: #2F3A49;
@@ -3286,17 +3151,18 @@ button {
 
 .floor-plan__modal-right .floor-mobile {
   display: none;
-  padding: 20px;
-  gap: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
 }
 
 .floor-plan__modal-right .floor-mobile img {
-  width: 100%;
-  max-width: 400px;
+  height: 200px;
 }
 
 .floor-plan__modal-right .floor-mobile .floor-plan__from {
@@ -3304,18 +3170,12 @@ button {
   width: -moz-max-content;
   width: max-content;
   margin: auto;
-  padding: 10px 24px;
   border-radius: 10px;
-  background-color: white;
   color: #5E7390;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.08);
-}
-
-.floor-plan__modal-right #menu-phone_number {
-  margin-top: 10px !important;
 }
 
 .floor-plan__modal-right .iti__flag-container {
@@ -3359,13 +3219,17 @@ button {
 .floor-plan__modal-right-title {
   width: 100%;
   font-size: 64px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 100%;
   font-family: "Tenor Sans", sans-serif;
   color: white;
   text-transform: uppercase;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.floor-plan__modal-right-title span {
+  color: #DCC39E;
 }
 
 @media (min-width: 576px) {
@@ -3398,18 +3262,7 @@ button {
   }
 }
 
-@media (max-width: 1440px) and (max-height: 700px) {
-  .floor-plan__modal-right {
-    padding: 50px 40px;
-  }
-}
-
 @media (max-width: 1200px) {
-  .header__scroll {
-    right: 50px;
-    top: 90px;
-  }
-
   .footer__list {
     max-width: 992px;
     -ms-flex-wrap: wrap;
@@ -3507,11 +3360,6 @@ button {
     display: none;
   }
 
-  .location__img > img {
-    -o-object-position: -100px;
-       object-position: -100px;
-  }
-
   .interior {
     display: none;
   }
@@ -3557,12 +3405,13 @@ button {
   }
 
   .header__scroll {
-    display: none;
+    right: 50px;
+    bottom: 50px;
   }
 
   .intro::before {
     bottom: auto;
-    top: 0;
+    top: -200px;
     height: 1150px;
     width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 56, 69, 0)), color-stop(61.35%, #2B3845));
@@ -3753,51 +3602,18 @@ button {
   }
 
   .floor-plan__modal {
-    height: 100%;
-  }
-
-  .floor-plan__modal-left {
-    width: 480px;
-  }
-
-  .floor-plan__modal-right {
-    width: calc(100% - 480px);
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 44px;
-  }
-
-  .floor-plan__modal {
-    height: 100%;
-  }
-
-  .floor-plan__modal-left {
-    width: 480px;
-  }
-
-  .floor-plan__modal-right {
-    width: calc(100% - 480px);
-    padding: 50px 15px;
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 44px;
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 44px;
-  }
-}
-
-@media (max-width: 890px) {
-  .floor-plan__modal {
+    width: calc(100% - 30px);
+    max-width: 630px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #2F3A49;
     overflow-y: scroll;
+    border: 0;
   }
 
   .floor-plan__modal-left {
@@ -3806,39 +3622,50 @@ button {
 
   .floor-plan__modal-right {
     width: 100%;
-    max-width: 600px;
+    padding: 50px 15px 15px;
     height: auto;
+    gap: 20px;
   }
 
-  .floor-plan__modal-right .floor-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .floor-plan__modal-right .menu__submit {
+    width: 100%;
+    max-width: none;
   }
 
-  .floor-plan__modal {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: #2F3A49;
-    overflow-y: scroll;
-  }
-
-  .floor-plan__modal-left {
+  .floor-plan__modal-right .menu__about-project-btn {
     display: none;
   }
 
-  .floor-plan__modal-right {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+  .floor-plan__modal-right .menu__lower-btn-con {
+    margin-top: 0;
+  }
+
+  .floor-plan__modal-right .menu__input-text {
+    margin-bottom: 15px;
+    margin-top: 0;
   }
 
   .floor-plan__modal-right .floor-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .floor-plan__modal-right-title {
+    font-size: 44px;
+  }
+
+  .floor-plan__modal-right label {
+    display: none;
+  }
+
+  .floor-plan__modal-logo {
+    display: none;
+  }
+
+  .floor-plan__modal-right-title {
+    font-size: 32px;
+    margin-bottom: 0px;
   }
 }
 
@@ -3964,6 +3791,11 @@ button {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  .header__scroll {
+    right: 20px;
+    bottom: 20px;
   }
 
   .footer__list:nth-of-type(2) {
@@ -4092,11 +3924,6 @@ button {
 
   .offer__btn span {
     display: block;
-  }
-
-  .floor__tab {
-    gap: 7px;
-    margin-bottom: 25px;
   }
 
   .floor__tab-item {
@@ -4296,6 +4123,10 @@ button {
     font-size: 120px;
   }
 
+  .floor__tab {
+    gap: 10px;
+  }
+
   .brochure__sm-title {
     margin-bottom: 10px;
   }
@@ -4424,14 +4255,6 @@ button {
 }
 
 @media (max-width: 440px) {
-  .floor-plan__modal-right-title {
-    font-size: 32px;
-  }
-
-  .floor-plan__modal-right-title {
-    font-size: 32px;
-  }
-
   .floor-plan__modal-right-title {
     font-size: 32px;
   }

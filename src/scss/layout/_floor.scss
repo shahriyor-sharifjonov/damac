@@ -143,9 +143,8 @@
         justify-content: center;
         gap: 28px;
         margin-bottom: 50px;
-        @include media(768){
-            gap: 7px;
-            margin-bottom: 25px;
+        @include media(576){
+            gap: 10px;
         }
         &-item{
             padding: 8px 22px;
@@ -158,6 +157,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            white-space: nowrap;
             @include media(768){
                 padding: 6px 14px;
                 font-weight: 400;
