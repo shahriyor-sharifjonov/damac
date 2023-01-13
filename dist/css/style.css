@@ -3654,6 +3654,10 @@ button {
   .showmore.sm {
     display: block;
   }
+
+  .floor__item-img {
+    min-height: 280px;
+  }
 }
 
 @media (max-width: 440px) {
