@@ -241,7 +241,7 @@
 
 
         .brochure__form-item {
-            padding-top: 16px;
+            // padding-top: 16px;
         }
 
         .brochure__form-item-input {
@@ -302,7 +302,7 @@
 
 
             .brochure__form-tag {
-                column-gap: 20px;
+                column-gap: 11px;
 
                 &-item {
                     font-size: 12px;
@@ -345,9 +345,9 @@
                 padding: 0 12px;
             }
 
-             .brochure__form-content {
-                padding: 30px 38px;
-             }
+            .brochure__form-content {
+               padding: 30px 38px;
+            }
         }
     }
 

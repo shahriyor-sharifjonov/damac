@@ -524,6 +524,8 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .intro__title {
@@ -1840,10 +1842,6 @@ button {
   height: 40px;
 }
 
-.brochure__sm .brochure__form-item {
-  padding-top: 16px;
-}
-
 .brochure__sm .brochure__form-item-input {
   font-weight: 700;
   color: #37485A;
@@ -2086,11 +2084,15 @@ button {
   display: block;
 }
 
-.location__img img {
+.location__img > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.location__img .sm {
+  display: none;
 }
 
 .interior {
@@ -2343,6 +2345,15 @@ button {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .popup.floorplan-popup .popup__body {
@@ -2950,10 +2961,6 @@ button {
         flex-wrap: wrap;
   }
 
-  .intro__background img {
-    width: auto;
-  }
-
   .intro__title {
     font-size: 74px;
   }
@@ -3024,7 +3031,7 @@ button {
     display: none;
   }
 
-  .location__img img {
+  .location__img > img {
     -o-object-position: -100px;
        object-position: -100px;
   }
@@ -3276,7 +3283,7 @@ button {
             transform: rotate(-180deg);
   }
 
-  .location__img img {
+  .location__img > img {
     -o-object-position: -150px;
        object-position: -150px;
   }
@@ -3373,6 +3380,11 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .intro__background img {
+    -o-object-position: -250px;
+       object-position: -250px;
   }
 
   .intro__title {
@@ -3529,6 +3541,14 @@ button {
     aspect-ratio: 4/3;
   }
 
+  .popup__body {
+    gap: 30px;
+  }
+
+  .popup__tag-wrap {
+    gap: 15px 28px;
+  }
+
   .handover-popup .popup__body {
     height: inherit;
     padding: 0 0;
@@ -3614,10 +3634,6 @@ button {
             flex-direction: column;
   }
 
-  .intro__background img {
-    right: -100px;
-  }
-
   .intro__title {
     font-size: 32px;
   }
@@ -3693,9 +3709,9 @@ button {
   }
 
   .brochure__sm .brochure__form-tag {
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -webkit-column-gap: 11px;
+       -moz-column-gap: 11px;
+            column-gap: 11px;
   }
 
   .brochure__sm .brochure__form-tag-item {
@@ -3747,7 +3763,11 @@ button {
   }
 
   .location {
-    height: 700px;
+    max-height: 100vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    overflow: hidden;
   }
 
   .interior-mobile .swiper {
@@ -3775,6 +3795,33 @@ button {
   .showmore.sm {
     display: block;
   }
+
+  .intro__background img {
+    -o-object-position: 70%;
+       object-position: 70%;
+  }
+
+  .floor__item-img {
+    min-height: 280px;
+  }
+
+  .location__img > img {
+    display: none;
+  }
+
+  .location__img .sm {
+    display: block;
+    position: relative;
+  }
+
+  .location__img .sm img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup__button {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -3784,10 +3831,6 @@ button {
 }
 
 @media (max-width: 420px) {
-  .intro__background img {
-    right: -150px;
-  }
-
   .popup__close {
     top: 24px;
     right: 24px;
@@ -3805,9 +3848,5 @@ button {
 
   .brochure__sm .brochure__form-content {
     padding: 30px 38px;
-  }
-
-  .location {
-    height: 600px;
   }
 }

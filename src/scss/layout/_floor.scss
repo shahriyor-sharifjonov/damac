@@ -201,6 +201,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include media(575){
+                min-height: 280px;
+            }
             img{
                 max-width: 100%;
             }
