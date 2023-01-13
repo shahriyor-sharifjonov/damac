@@ -2626,9 +2626,9 @@ button {
   bottom: -180px;
   left: 0;
   z-index: 3;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(68.48%, #000000), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, #000000 68.48%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(0deg, #000000 68.48%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(68.48%, #2B3845), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(bottom, #2B3845 68.48%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, #2B3845 68.48%, rgba(0, 0, 0, 0) 100%);
 }
 
 .popup__bg-md img {
@@ -3831,7 +3831,7 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #000000;
+    background-color: #2B3845;
   }
 
   .popup#register input::-webkit-input-placeholder {

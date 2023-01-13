@@ -298,7 +298,7 @@
             bottom: -180px;
             left: 0;
             z-index: 3;
-            background: linear-gradient(0deg, #000000 68.48%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(0deg, #2B3845 68.48%, rgba(0, 0, 0, 0) 100%);
         }
 
         img {
@@ -326,7 +326,7 @@
     @media(max-width: 768px) {
         &__body {
             flex-direction: column;
-            background-color: #000000;
+            background-color: #2B3845;
         }
 
         &#register {
