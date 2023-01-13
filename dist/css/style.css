@@ -4398,6 +4398,10 @@ button {
   .popup__tag-item {
     width: 100%;
   }
+
+  .popup__body {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 400px) {
