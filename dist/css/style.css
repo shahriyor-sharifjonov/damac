@@ -1842,10 +1842,6 @@ button {
   height: 40px;
 }
 
-.brochure__sm .brochure__form-item {
-  padding-top: 16px;
-}
-
 .brochure__sm .brochure__form-item-input {
   font-weight: 700;
   color: #37485A;
@@ -3646,9 +3642,9 @@ button {
   }
 
   .brochure__sm .brochure__form-tag {
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -webkit-column-gap: 11px;
+       -moz-column-gap: 11px;
+            column-gap: 11px;
   }
 
   .brochure__sm .brochure__form-tag-item {
