@@ -452,6 +452,7 @@
         &__title-md {
             padding: 70px 0;
         }
+        
     }
 
     @media(max-width: 420px) {
@@ -464,7 +465,9 @@
         &__tag-item {
             width: 100%;
         }
-
+        &__body {
+            padding-top: 0;
+        }
 
     }
 }

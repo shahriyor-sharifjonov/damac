@@ -117,7 +117,7 @@ export function init() {
                         start: "top 80%",
                         end: "top 20%",
                         scrub: 2,
-                      },
+                      }, 
                     });
                     tl.add("start")
                       .from(
