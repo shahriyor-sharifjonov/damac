@@ -191,6 +191,8 @@
 
             &::before {
                 opacity: 1;
+                width: 3px;
+                height: 3px;
             }
         }
 
@@ -304,6 +306,10 @@
 
             .brochure__form-item {
                 padding-top: 0;
+            }
+
+            .brochure__form-tag-item {
+                font-size: 12px;
             }
 
 

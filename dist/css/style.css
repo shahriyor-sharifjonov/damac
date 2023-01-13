@@ -1042,6 +1042,7 @@ button {
   margin-right: 10px;
   font-weight: 600;
   font-size: 14px;
+  color: black;
 }
 
 .floor {
@@ -1754,6 +1755,8 @@ button {
 
 .brochure__sm .brochure__form-tag-item::before {
   opacity: 1;
+  width: 3px;
+  height: 3px;
 }
 
 .brochure__sm .brochure__form-tag {
@@ -3903,7 +3906,7 @@ button {
   }
 
   .floor__item-info-row {
-    margin-bottom: 20px;
+    margin-bottom: 46px;
     width: 100%;
   }
 
@@ -4101,6 +4104,10 @@ button {
 
   .brochure__sm .brochure__form-item {
     padding-top: 0;
+  }
+
+  .brochure__sm .brochure__form-tag-item {
+    font-size: 12px;
   }
 
   .brochure__sm .brochure__form-tag-item {
