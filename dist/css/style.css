@@ -3562,7 +3562,7 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #2F3A49;
-    overflow-y: scroll;
+    overflow-y: auto;
     border: 0;
   }
 
