@@ -10,7 +10,7 @@
     &__body{
         position: relative;
         width: 100%;
-        overflow-x: visible;
+        overflow-x: hidden;
         overflow-y: hidden;
         @include media(1200){
             display: none;
