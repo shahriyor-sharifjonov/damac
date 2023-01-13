@@ -17,7 +17,7 @@ locationmap.init();
 floortabs.init();
 accordion.init();
 animation.init();
-counter.init();
+counter.init(); 
 cursor.init();
 slider.init();
 popup.init();
