@@ -405,6 +405,7 @@ button {
   bottom: 100px;
   right: 100px;
   z-index: 60;
+  display: none;
 }
 
 .footer {

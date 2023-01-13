@@ -107,27 +107,30 @@ export function init() {
                 });
             };
         },
-        // "(max-width: 576px)": function() {
-        //     gsap.utils.toArray(".intro").forEach(el => {
-        //         const tl = gsap.timeline({
-        //                 scrollTrigger: {
-        //                     trigger: el,
-        //                     start: "top top",
-        //                     end: "bottom 30%",
-        //                     scrub: 0.8,
-        //                     markers: false,
-        //                 }, 
-        //                 defaults: {ease: "none"} 
-        //             });
-        //         tl.add('start')
-        //         .to('.intro__background', {
-        //             scale: 0.5,
-        //             y: oneFourHeight,
-        //         }, 'start')
-        //         .to('.intro__body', {
-        //             y: -200,
-        //         }, 'start')
-        //     })
-        // }
+        "(max-width: 1200px)": function() {
+            if(document.querySelector('.amenities-mobile__box')){
+                console.log('b');
+                gsap.utils.toArray(".amenities-mobile__box").forEach((section) => {
+                    const tl = gsap.timeline({
+                      scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "top 20%",
+                        scrub: 2,
+                      },
+                    });
+                    tl.add("start")
+                      .from(
+                        section,
+                        {
+                          x: -200, 
+                          opacity: 0,
+                          ease: "expo.ease",
+                        },
+                        "start"
+                      )
+                    })
+            }
+        }
     })
 }
