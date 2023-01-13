@@ -1729,7 +1729,6 @@ button {
   line-height: 24px;
   color: #1D1D1D;
   opacity: 0.4;
-  width: calc(50% - 20px);
   position: relative;
 }
 
@@ -2960,6 +2959,15 @@ button {
     width: 566px;
   }
 
+  .brochure__form-tag {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .brochure__sm {
     display: block;
   }
@@ -3462,6 +3470,12 @@ button {
     width: 100%;
   }
 
+  .brochure__sm .brochure__form-tag {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+
   .brochure__sm .brochure__form-content {
     width: 100%;
     max-width: 100%;
@@ -3645,12 +3659,6 @@ button {
     padding-top: 0;
   }
 
-  .brochure__sm .brochure__form-tag {
-    -webkit-column-gap: 11px;
-       -moz-column-gap: 11px;
-            column-gap: 11px;
-  }
-
   .brochure__sm .brochure__form-tag-item {
     font-size: 12px;
     line-height: 15px;
@@ -3779,10 +3787,6 @@ button {
 }
 
 @media (max-width: 400px) {
-  .brochure__sm .brochure__form-item {
-    padding: 0 12px;
-  }
-
   .brochure__sm .brochure__form-content {
     padding: 30px 38px;
   }
