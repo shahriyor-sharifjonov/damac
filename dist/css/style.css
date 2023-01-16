@@ -1056,7 +1056,7 @@ body.loaded #preloader {
   display: none;
   width: 430px;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   z-index: 1;
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
@@ -3061,7 +3061,6 @@ body.loaded #preloader {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  border: 2px solid #2F3A49;
 }
 
 .floor-plan__modal-back {
@@ -3724,7 +3723,6 @@ body.loaded #preloader {
             flex-direction: column;
     background-color: #2F3A49;
     overflow-y: auto;
-    border: 0;
   }
 
   .floor-plan__modal-left {

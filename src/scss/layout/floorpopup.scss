@@ -31,7 +31,6 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        border: 2px solid #2F3A49;
         @media (max-width: 992px) {
             width: calc(100% - 30px);
             max-width: 630px;
@@ -39,7 +38,6 @@
             flex-direction: column;
             background-color: #2F3A49;
             overflow-y: auto;
-            border: 0;
         }
         &-back{
             position: absolute;
