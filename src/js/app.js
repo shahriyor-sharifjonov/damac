@@ -1,47 +1,24 @@
-import gsap from 'gsap'
+import imagesLoaded from 'imagesloaded'
+let loaderLogo = document.querySelector("#preloader__loaded-logo");
 
-const preloader = document.querySelector('#preloader');
-const loaderImgs = document.querySelectorAll('.loader-img')
-const body = document.body;
+setTimeout(function () {
+    loaderLogo.classList.add('show');
+}, 500)
 
-const tlpre = gsap.timeline();
+const images = document.querySelectorAll("img");
+const loader = document.querySelector("#preloader__num");
+const updateProgress = (instance) => {
+    const prc = Math.round((instance.progressedCount * 100) / images.length);
+    loader.innerHTML = prc + "%"
+}
 
-tlpre.to(preloader, { duration: 0.5, });
-tlpre.to('#loader-title', { opacity: 1, duration: 0.2 });
+const showDemo = () => {
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 1000);
+}
 
-loaderImgs.forEach(item => {
-
-    tlpre.to(item, {
-        className: "loader-img active",
-        duration: 1,
-        ease: "power3.ease",
-    });
-
-    tlpre.set(item, {
-        className: "loader-img leave",
-        delay: 0.5,
-        duration: 1,
-        ease: "power3.ease",
-    })
-
-
-    if (window.innerWidth >= 460) {
-
-    }
-
-})
-tlpre.to('#loader-title', { xPercent: -190, scale: 80, duration: 0.2, });
-tlpre.to(preloader, { backgroundColor: "#fff", opacity: 0, delay: 0.1, });
-tlpre.to(preloader, { yPercent: -100, delay: 0.2, });
-tlpre.to(body, { className: 'loaded' });
-
-
-window.addEventListener('load', function (event) {
-    // document.body.classList.add('loaded');
-});
-
-
-
+setTimeout(() => imagesLoaded(images).on("progress", updateProgress).on("always", showDemo), 500)
 
 // import * as smoothscroll from "./modules/smoothscroll.js";
 import * as locationmap from "./modules/locationmap.js";

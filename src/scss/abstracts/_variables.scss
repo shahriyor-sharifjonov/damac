@@ -7,6 +7,7 @@ $z-indexes: (
     'dropdown': 40,
     'default': 1,
     'below': -1,
+    'preloader': 1000,
 );
 
 @function z($layer) {
