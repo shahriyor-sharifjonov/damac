@@ -3349,10 +3349,6 @@ body.loaded #preloader {
         flex-wrap: wrap;
   }
 
-  .intro__background img {
-    width: auto;
-  }
-
   .intro__title {
     font-size: 74px;
   }
@@ -3778,8 +3774,8 @@ body.loaded #preloader {
   }
 
   .intro__background img {
-    -o-object-position: 100px;
-       object-position: 100px;
+    -o-object-position: -100px;
+       object-position: -100px;
   }
 
   .intro__title {
@@ -4285,6 +4281,11 @@ body.loaded #preloader {
             flex-direction: column;
   }
 
+  .intro__background img {
+    -o-object-position: 85%;
+       object-position: 85%;
+  }
+
   .intro__title {
     font-size: 32px;
   }
@@ -4493,11 +4494,6 @@ body.loaded #preloader {
        object-position: left;
   }
 
-  .intro__background img {
-    -o-object-position: 160px;
-       object-position: 160px;
-  }
-
   .about__bg img {
     -o-object-position: 0;
        object-position: 0;
@@ -4532,6 +4528,44 @@ body.loaded #preloader {
   .location__img .sm img {
     width: 100%;
     height: 100%;
+  }
+
+  .popup__input input {
+    font-size: 16px;
+    position: relative;
+  }
+
+  .popup__input input:focus ~ .popup__input-hr {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-color: #DCC39E;
+    background: transparent;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+
+  .popup__input input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .popup__input input::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  .popup__input input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .popup__input input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .popup__input input::placeholder {
+    font-size: 16px;
   }
 
   .popup__button {
