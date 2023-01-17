@@ -311,10 +311,6 @@ body.loaded #preloader {
   overflow: hidden;
 }
 
-#preloader__loaded-logo.show {
-  width: 100%;
-}
-
 .header {
   background: #fff;
   display: -webkit-box;

@@ -181,10 +181,6 @@ body.loaded #preloader {
 		overflow: hidden;
 	}
 
-	&__loaded-logo.show {
-		width: 100%;
-	}
-
 	@media(max-width: 564px) {
 		padding: 40px 24px;
 	}
