@@ -3145,17 +3145,58 @@ body.loaded #preloader {
 .floor-plan__modal-right .menu__input-text {
   width: 100%;
   padding: 12px;
-  border: 0.5px solid white;
+  border: 0.5px solid #ffffff50;
   background-color: transparent;
   outline: none;
-  caret-color: white;
   color: white;
+  font-weight: 800;
   border-radius: 0;
+}
+
+.floor-plan__modal-right .menu__input-text:focus {
+  border-color: #DCC39E;
+}
+
+.floor-plan__modal-right .menu__input-text:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-color: #DCC39E;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.floor-plan__modal-right .menu__input-text::-webkit-input-placeholder {
+  color: #ffffff50;
+  font-weight: 400;
+}
+
+.floor-plan__modal-right .menu__input-text::-moz-placeholder {
+  color: #ffffff50;
+  font-weight: 400;
+}
+
+.floor-plan__modal-right .menu__input-text:-ms-input-placeholder {
+  color: #ffffff50;
+  font-weight: 400;
+}
+
+.floor-plan__modal-right .menu__input-text::-ms-input-placeholder {
+  color: #ffffff50;
+  font-weight: 400;
+}
+
+.floor-plan__modal-right .menu__input-text::placeholder {
+  color: #ffffff50;
+  font-weight: 400;
 }
 
 .floor-plan__modal-right .menu__submit {
   width: calc(100% - 124px);
-  height: 42px;
+  height: 45px;
   background: #DCC39E;
   border: 0;
   color: white;
@@ -4558,6 +4599,32 @@ body.loaded #preloader {
     gap: 7px;
     width: calc(100% + 30px);
     margin-left: -15px;
+  }
+
+  .floor-plan__modal {
+    overflow: visible;
+  }
+
+  .floor-plan__modal-back {
+    right: -14px;
+    top: -14px;
+  }
+
+  .floor-plan__modal-right {
+    padding: 37px 15px 32px 15px;
+  }
+
+  .floor-plan__modal-right .menu__input-text {
+    height: 42px;
+  }
+
+  .floor-plan__modal-right .floor-mobile .floor-plan__from {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .floor-plan__modal-right-title {
+    margin-bottom: -19px;
   }
 }
 
