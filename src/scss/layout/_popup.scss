@@ -459,8 +459,8 @@
     @media(max-width: 420px) {
 
         &__close {
-            top: 25px;
-            right: 25px;
+            top: 0px;
+            right: 0px;
         }
 
         &__tag-item {
@@ -625,6 +625,9 @@
             gap: 24px;
             max-width: 700px;
             width: 100%;
+            @include media(575){
+                gap: 0;
+            }
         }
     }
 
@@ -665,6 +668,11 @@
         max-width: 303px;
         width: 100%;
         min-width: 0;
+        @include media(575){
+            width: calc(100% + 30px); 
+            max-width: calc(100% + 30px);
+            margin-left: -15px;
+        }
     }
 
     .popup__tag-ul {
@@ -672,7 +680,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 16px 28px;
         @include media(575){
-            gap: 9px;
+            gap: 7px;
+            width: calc(100% + 30px);
+            margin-left: -15px;
         }
     }
 
@@ -828,7 +838,7 @@
 
     @media(max-width: 576px) {
         .popup__body {
-            padding: 40px 30px;
+            padding: 37px 30px;
         }
 
         .popup__tag-ul {

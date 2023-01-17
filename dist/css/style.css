@@ -3150,6 +3150,7 @@ body.loaded #preloader {
   outline: none;
   caret-color: white;
   color: white;
+  border-radius: 0;
 }
 
 .floor-plan__modal-right .menu__submit {
@@ -4494,7 +4495,7 @@ body.loaded #preloader {
   }
 
   .brochure-popup .popup__body {
-    padding: 40px 30px;
+    padding: 37px 30px;
   }
 
   .brochure-popup .popup__tag-ul {
@@ -4543,8 +4544,20 @@ body.loaded #preloader {
     margin-top: 30px;
   }
 
+  .brochure-popup .popup__body-head {
+    gap: 0;
+  }
+
+  .brochure-popup .popup__title {
+    width: calc(100% + 30px);
+    max-width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+
   .brochure-popup .popup__tag-ul {
-    gap: 9px;
+    gap: 7px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
   }
 }
 
@@ -4588,8 +4601,8 @@ body.loaded #preloader {
 
 @media (max-width: 420px) {
   .popup__close {
-    top: 25px;
-    right: 25px;
+    top: 0px;
+    right: 0px;
   }
 
   .popup__tag-item {
