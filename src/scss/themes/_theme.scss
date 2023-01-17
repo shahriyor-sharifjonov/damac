@@ -169,12 +169,12 @@ body.loaded #preloader {
 	&__logo {
 		position: absolute;
 		top: 50%;
+        line-height: 0;
 		right: 50%;
 		transform: translate(50%, -50%);
         @include media(575){
             max-width: 200px;
-            width: 100%;
-            img{
+            &>img{
                 width: 100%;
             }
         }
@@ -187,15 +187,14 @@ body.loaded #preloader {
 		top: 0;
 		overflow: hidden;
         @include media(575){
-            // max-width: 200px;
+            height: 100%;
             img{
-                // max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left;
             }
         }
-	}
-
-	&__loaded-logo.show {
-		width: 100%;
 	}
 
 	@media(max-width: 564px) {

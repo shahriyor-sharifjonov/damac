@@ -496,7 +496,9 @@
         border-radius: 5px;
         padding-top: 72px;
         padding-bottom: 72px;
-        height: calc(100% - 100px);
+        @include media(575){
+            height: calc(100% - 100px);
+        }
 
         &-rows {
             display: flex;
@@ -552,7 +554,7 @@
             border-radius: 0;
             background-color: #2B3845;
 
-            &::-webkit-scrollbar {
+            ::-webkit-scrollbar {
                 width: 11px;
             }
 
@@ -669,6 +671,7 @@
         max-width: 303px;
         width: 100%;
         min-width: 0;
+        text-align: center;
         @include media(575){
             width: calc(100% + 30px); 
             max-width: calc(100% + 30px);

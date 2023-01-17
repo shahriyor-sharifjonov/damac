@@ -1,14 +1,11 @@
 import imagesLoaded from 'imagesloaded'
 let loaderLogo = document.querySelector("#preloader__loaded-logo");
 
-setTimeout(function () {
-    loaderLogo.classList.add('show');
-}, 500)
-
 const images = document.querySelectorAll("img");
 const loader = document.querySelector("#preloader__num");
 const updateProgress = (instance) => {
     const prc = Math.round((instance.progressedCount * 100) / images.length);
+    loaderLogo.style.width = `${prc}%`
     loader.innerHTML = prc + "%"
 }
 
