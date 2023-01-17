@@ -1095,10 +1095,8 @@ body.loaded #preloader {
   background: #DCC39E;
   border-radius: 30px;
   text-transform: uppercase;
-  max-width: 210px;
   -webkit-box-shadow: 0px 4px 30px 0px #EBDDC840;
           box-shadow: 0px 4px 30px 0px #EBDDC840;
-  width: 100%;
 }
 
 .offer__btn span {
@@ -2750,7 +2748,6 @@ body.loaded #preloader {
   border-radius: 5px;
   padding-top: 72px;
   padding-bottom: 72px;
-  height: calc(100% - 100px);
 }
 
 .handover-popup .popup__body-rows {
@@ -2871,6 +2868,7 @@ body.loaded #preloader {
   max-width: 303px;
   width: 100%;
   min-width: 0;
+  text-align: center;
 }
 
 .brochure-popup .popup__tag-ul {
@@ -3599,7 +3597,7 @@ body.loaded #preloader {
   }
 
   .floor__title {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 30px;
     font-size: 32px;
     line-height: 39px;
@@ -4095,7 +4093,7 @@ body.loaded #preloader {
     background-color: #2B3845;
   }
 
-  .handover-popup .popup__body::-webkit-scrollbar {
+  .handover-popup .popup__body ::-webkit-scrollbar {
     width: 11px;
   }
 
@@ -4477,6 +4475,11 @@ body.loaded #preloader {
        object-position: 0;
   }
 
+  .offer__btn {
+    max-width: 210px;
+    width: 100%;
+  }
+
   .floor__item-title {
     margin-bottom: 20px;
   }
@@ -4505,6 +4508,10 @@ body.loaded #preloader {
 
   .popup__button {
     margin-top: 30px;
+  }
+
+  .handover-popup .popup__body {
+    height: calc(100% - 100px);
   }
 
   .brochure-popup .popup__body-head {
