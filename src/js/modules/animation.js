@@ -46,11 +46,6 @@ export function init() {
                         markers: false,
                         end: () =>
                             "+=" + document.querySelector(".amenities__wrapper").offsetWidth,
-                        onLeave: () => {
-                                const nextSection = document.querySelector('.floor');
-                                const tl = gsap.timeline();
-                                tl.to(window, 0, { scrollTo: {y: nextSection.offsetTop}, ease: "circ.easeOut" });
-                        }
                     },
                 });
                 document.querySelectorAll('.amenities__item').forEach(el => {
@@ -81,11 +76,6 @@ export function init() {
                         snap: 0,
                         end: () =>
                         "+=" + document.querySelector(".brochure__wrapper").offsetWidth,
-                        onLeave: () => {
-                            const nextSection = document.querySelector('.footer');
-                            const tl = gsap.timeline()
-                            tl.to(window, 0.1, { scrollTo: {y: nextSection.offsetTop}});
-                        }
                     },
                 });
             };
@@ -98,11 +88,11 @@ export function init() {
                         scrub: 1,
                         start: () => "+=" + document.querySelector(".interior__wrapper").offsetTop,
                         end: "bottom bottom",
-                        onLeave: () => {
-                            const nextSection = document.querySelector('.location');
-                            const tl = gsap.timeline()
-                            tl.to(window, 0.1, { scrollTo: {y: nextSection.offsetTop}});
-                        }
+                        // onLeave: () => {
+                        //     const nextSection = document.querySelector('.location');
+                        //     const tl = gsap.timeline()
+                        //     tl.to(window, 0.1, { scrollTo: {y: nextSection.offsetTop}});
+                        // }
                     },
                 });
             };
@@ -110,7 +100,7 @@ export function init() {
         "(max-width: 1200px)": function() {
             if(document.querySelector('.amenities-mobile__box')){
                 console.log('b');
-                gsap.utils.toArray(".amenities-mobile__box").forEach((section) => {
+                gsap.utils.toArray(".amenities-mobile__box:nth-child(odd)").forEach((section) => {
                     const tl = gsap.timeline({
                       scrollTrigger: {
                         trigger: section,
@@ -130,6 +120,26 @@ export function init() {
                         "start"
                       )
                     })
+                    gsap.utils.toArray(".amenities-mobile__box:nth-child(even)").forEach((section) => {
+                        const tl = gsap.timeline({
+                          scrollTrigger: {
+                            trigger: section,
+                            start: "top 80%",
+                            end: "top 20%",
+                            scrub: 2,
+                          }, 
+                        });
+                        tl.add("start")
+                          .from(
+                            section,
+                            {
+                              x: 200, 
+                              opacity: 0,
+                              ease: "expo.ease",
+                            },
+                            "start"
+                          )
+                        })
             }
         }
     })

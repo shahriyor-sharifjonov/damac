@@ -119,6 +119,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  background: #2b3845;
 }
 
 .body-overlay {
@@ -985,6 +986,7 @@ body.loaded #preloader {
   color: #FFFFFF;
   margin-bottom: 30px;
   text-align: center;
+  display: none;
 }
 
 .developer__title {
@@ -1864,6 +1866,7 @@ body.loaded #preloader {
   padding-top: 76px;
   font-family: "Montserrat";
   line-height: 0;
+  background: #fff;
 }
 
 .brochure__sm-title {
@@ -2360,7 +2363,7 @@ body.loaded #preloader {
 }
 
 .interior-mobile__body {
-  padding: 30px 15px;
+  padding: 60px 15px;
 }
 
 .interior-mobile__title {
@@ -3629,7 +3632,7 @@ body.loaded #preloader {
   }
 
   .floor {
-    padding: 25px 0;
+    padding: 45px 0;
   }
 
   .floor__title {
@@ -4342,7 +4345,7 @@ body.loaded #preloader {
 
   .developer__title {
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .developer__row {
