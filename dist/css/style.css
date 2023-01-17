@@ -1093,14 +1093,14 @@ body.loaded #preloader {
 }
 
 .offer__subtitle {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 30px;
   line-height: 110%;
   text-align: center;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .offer__row {
@@ -1146,15 +1146,15 @@ body.loaded #preloader {
 }
 
 .offer__percent {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 200px;
   line-height: 100%;
   text-align: center;
-  color: #EBDDC8;
+  color: #DCC39E;
 }
 
 .offer__btn {
-  margin-top: 33px;
+  margin-top: 44px;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,9 +1165,13 @@ body.loaded #preloader {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #EBDDC8;
+  background: #DCC39E;
   border-radius: 30px;
   text-transform: uppercase;
+  max-width: 210px;
+  -webkit-box-shadow: 0px 4px 30px 0px #EBDDC840;
+          box-shadow: 0px 4px 30px 0px #EBDDC840;
+  width: 100%;
 }
 
 .offer__btn span {
@@ -2030,7 +2034,7 @@ body.loaded #preloader {
   top: 0;
   right: 0;
   width: 333px;
-  background: #2F3B46;
+  background: #37485A;
   z-index: 3;
   padding: 46px 40px;
 }
@@ -3948,7 +3952,7 @@ body.loaded #preloader {
   }
 
   .offer__subtitle {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .offer__row {
@@ -4554,6 +4558,11 @@ body.loaded #preloader {
   .intro__background img {
     -o-object-position: 160px;
        object-position: 160px;
+  }
+
+  .about__bg img {
+    -o-object-position: 0;
+       object-position: 0;
   }
 
   .floor__item-title {

@@ -17,5 +17,11 @@ export function init() {
                     .slideDown(200);
             }
         });
+        $(".accordion__item").on("click", function() {
+            $(this)
+                .parent(".accordion__content")
+                .slideUp(200);
+            $(".accordion__button").removeClass("active")
+        })
     });
 }
