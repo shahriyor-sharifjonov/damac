@@ -496,6 +496,7 @@
         border-radius: 5px;
         padding-top: 72px;
         padding-bottom: 72px;
+        height: calc(100% - 100px);
 
         &-rows {
             display: flex;
@@ -526,8 +527,8 @@
     }
 
     .popup__close-2 {
-        background: #2B3845;
-        color: #fff;
+        background: #DCC39E;
+        color: #2F3A49;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
@@ -546,7 +547,7 @@
     @media(max-width: 768px) {
 
         .popup__body {
-            height: inherit;
+            height: calc(100% - 100px);
             padding: 0 0;
             border-radius: 0;
             background-color: #2B3845;
@@ -560,7 +561,7 @@
             }
 
             ::-webkit-scrollbar-thumb {
-                background: #EBDDC8;
+                background: #DCC39E;
             }
 
 
