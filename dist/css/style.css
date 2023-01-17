@@ -3080,12 +3080,13 @@ body.loaded #preloader {
 
 .floor-plan__modal-right .menu__input-text {
   width: 100%;
-  padding: 12px;
+  padding: 0 12px;
   border: 0.5px solid #ffffff50;
   background-color: transparent;
   outline: none;
   color: white;
   font-weight: 800;
+  font-size: 16px;
   border-radius: 0;
 }
 
@@ -3108,26 +3109,31 @@ body.loaded #preloader {
 .floor-plan__modal-right .menu__input-text::-webkit-input-placeholder {
   color: #ffffff50;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .floor-plan__modal-right .menu__input-text::-moz-placeholder {
   color: #ffffff50;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .floor-plan__modal-right .menu__input-text:-ms-input-placeholder {
   color: #ffffff50;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .floor-plan__modal-right .menu__input-text::-ms-input-placeholder {
   color: #ffffff50;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .floor-plan__modal-right .menu__input-text::placeholder {
   color: #ffffff50;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .floor-plan__modal-right .menu__submit {
@@ -4469,6 +4475,15 @@ body.loaded #preloader {
 @media (max-width: 575px) {
   .showmore.sm {
     display: block;
+  }
+
+  #preloader__logo {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  #preloader__logo img {
+    width: 100%;
   }
 
   .intro__background img {

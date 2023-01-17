@@ -171,6 +171,13 @@ body.loaded #preloader {
 		top: 50%;
 		right: 50%;
 		transform: translate(50%, -50%);
+        @include media(575){
+            max-width: 200px;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
 	}
 
 	&__loaded-logo {
@@ -179,6 +186,12 @@ body.loaded #preloader {
 		position: absolute;
 		top: 0;
 		overflow: hidden;
+        @include media(575){
+            // max-width: 200px;
+            img{
+                // max-width: 100%;
+            }
+        }
 	}
 
 	&__loaded-logo.show {

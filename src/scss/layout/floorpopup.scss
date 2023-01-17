@@ -105,12 +105,13 @@
             }
             .menu__input-text{
                 width: 100%;
-                padding: 12px;
+                padding: 0 12px;
                 border: 0.5px solid #ffffff50;
                 background-color: transparent;
                 outline: none;
                 color: white;
                 font-weight: 800;
+                font-size: 16px;
                 border-radius: 0;
                 &:focus{
                     border-color: #DCC39E;
@@ -128,6 +129,7 @@
                 &::placeholder{
                     color: #ffffff50;
                     font-weight: 400;
+                    font-size: 16px;
                 }
                 @include media(575){
                     height: 42px;
