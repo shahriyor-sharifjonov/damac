@@ -2220,7 +2220,7 @@ body.loaded #preloader {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: -660px;
+  margin-left: -330px;
   height: 100%;
 }
 
