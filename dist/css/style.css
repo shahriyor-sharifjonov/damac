@@ -312,6 +312,14 @@ body.loaded #preloader {
   overflow: hidden;
 }
 
+.fixed-soc {
+  position: fixed;
+  left: 70px;
+  bottom: 67px;
+  display: block;
+  z-index: 99;
+}
+
 .header {
   background: #fff;
   display: -webkit-box;
