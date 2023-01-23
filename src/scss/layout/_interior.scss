@@ -7,6 +7,9 @@
     @include media(1200){
         display: none;
     }
+    img{
+        max-height: 80vh !important;
+    }
     &__body{
         width: 100%;
         overflow-x: visible;
@@ -53,28 +56,36 @@
         justify-content: flex-start;
         position: relative;
         z-index: 1;
+        gap: 100px;
     }
     &__left{
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
-        margin-left: -330px;
+        position: relative;
+        left: -660px;
         height: 100%;
+        gap: 100px;
         &.not{
             margin-left: 0;
         }
         &-img{
             position: relative;
             height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+
             img{
                 max-height: 100%;
             }
             &_2{
-                position: absolute;
-                bottom: 30px;
-                right: -226px;
-                height: 350px;
-                width: 300px;
+                // position: absolute;
+                // bottom: 30px;
+                // right: -226px;
+                // height: 350px;
+                // width: 300px;
                 &.not{
                     position: relative;
                     bottom: 0;
@@ -86,9 +97,11 @@
         }
         &-col{
             display: flex;
-            flex-direction: column;
-            margin-left: 60px;
-            justify-content: flex-end;
+            align-items: center;
+            justify-content: center;
+            // flex-direction: column;
+            // margin-left: 60px;
+            // justify-content: flex-end;
         }
         &-p{
             margin-left: 60px;
@@ -99,11 +112,6 @@
             font-size: 18px;
             line-height: 150%;
             color: #FFFFFF;
-            &.not{
-                margin-top: 0;
-                margin-left: 0;
-                margin-bottom: 60px;
-            }
         }
     }
 }
